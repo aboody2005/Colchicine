@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="A comprehensive scientific portfolio on Colchicine — the alkaloid from Colchicum autumnale. Explore its extraction methods, pharmacology, and therapeutic applications." />
+  <title>Colchicine | Pharmacognosy Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ===== LOADER ===== -->
+  <div id="loader" class="loader">
+    <div class="loader-inner">
+      <div class="loader-molecule">
+        <div class="atom atom-1"></div>
+        <div class="atom atom-2"></div>
+        <div class="atom atom-3"></div>
+        <div class="atom atom-4"></div>
+        <div class="atom-center"></div>
+      </div>
+      <p class="loader-text">Loading Colchicine</p>
+      <div class="loader-bar"><div class="loader-fill"></div></div>
+    </div>
+  </div>
+
+  <!-- ===== CURSOR ===== -->
+  <div id="cursor-dot" class="cursor-dot"></div>
+  <div id="cursor-ring" class="cursor-ring"></div>
+
+  <!-- ===== PARTICLES ===== -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="8" stroke="url(#grad1)" stroke-width="2"/>
+            <circle cx="20" cy="8" r="3" fill="url(#grad1)"/>
+            <circle cx="30" cy="26" r="3" fill="url(#grad1)"/>
+            <circle cx="10" cy="26" r="3" fill="url(#grad1)"/>
+            <line x1="20" y1="11" x2="20" y2="12" stroke="url(#grad1)" stroke-width="2"/>
+            <line x1="27.5" y1="23.7" x2="28.5" y2="22" stroke="url(#grad1)" stroke-width="2"/>
+            <line x1="12.5" y1="23.7" x2="11.5" y2="22" stroke="url(#grad1)" stroke-width="2"/>
+            <defs>
+              <linearGradient id="grad1" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#a855f7"/>
+                <stop offset="100%" stop-color="#06b6d4"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span>Colchicine</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#hero" class="nav-link" data-id="hero">Home</a></li>
+        <li><a href="#about" class="nav-link" data-id="about">About</a></li>
+        <li><a href="#plant" class="nav-link" data-id="plant">The Plant</a></li>
+        <li><a href="#extraction" class="nav-link" data-id="extraction">Extraction</a></li>
+        <li><a href="#pharmacology" class="nav-link" data-id="pharmacology">Pharmacology</a></li>
+        <li><a href="#therapeutic" class="nav-link" data-id="therapeutic">Therapeutic Uses</a></li>
+        <li><a href="#toxicology" class="nav-link" data-id="toxicology">Toxicology</a></li>
+        <li><a href="#references" class="nav-link" data-id="references">References</a></li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero" class="hero">
+    <div class="hero-bg">
+      <img src="assets/colchicine_hero.png" alt="Colchicum autumnale botanical illustration" class="hero-bg-img" />
+      <div class="hero-bg-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>Pharmacognosy Research</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="title-sub">Discovering</span>
+        <span class="title-main">Colchicine</span>
+        <span class="title-tag">C<sub>22</sub>H<sub>25</sub>NO<sub>6</sub></span>
+      </h1>
+      <p class="hero-desc">A powerful tropolone alkaloid derived from <em>Colchicum autumnale</em> — one of nature's most fascinating and potent medicinal compounds. From ancient remedy to modern medicine.</p>
+      <div class="hero-stats">
+        <div class="stat-card">
+          <span class="stat-num">~1820</span>
+          <span class="stat-label">Year Isolated</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">399.4</span>
+          <span class="stat-label">Mol. Weight (g/mol)</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">3+</span>
+          <span class="stat-label">FDA Indications</span>
+        </div>
+      </div>
+      <div class="hero-cta">
+        <a href="#about" class="btn-primary" id="hero-explore-btn">Explore Research</a>
+        <a href="#extraction" class="btn-ghost">Extraction Methods</a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Scroll to explore</span>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Overview</span>
+        <h2 class="section-title">What is Colchicine?</h2>
+        <p class="section-subtitle">A naturally occurring alkaloid with a rich history spanning over two millennia of medical use</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-card glass-card reveal">
+          <div class="card-icon purple">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Classification</h3>
+          <p>Colchicine belongs to the <strong>tropolone alkaloid</strong> family. It is a naturally occurring secondary metabolite with a unique tricyclic ring structure — rings A (benzene), B (tropolone), and C (acetamido methoxy).</p>
+          <ul class="card-list">
+            <li>Kingdom: Plantae</li>
+            <li>Family: Colchicaceae</li>
+            <li>Type: Tropolone alkaloid</li>
+            <li>CAS Number: 64-86-8</li>
+          </ul>
+        </div>
+        <div class="about-card glass-card reveal">
+          <div class="card-icon cyan">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 6v6l4 2m6-2a10 10 0 11-20 0 10 10 0 0120 0z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Historical Background</h3>
+          <p>The use of <em>Colchicum autumnale</em> dates back to <strong>1500 BC</strong>, documented in the Ebers Papyrus of ancient Egypt for treating joint swelling. Greek physician Dioscorides described its use in the 1st century AD.</p>
+          <ul class="card-list">
+            <li>1500 BC — Ebers Papyrus records</li>
+            <li>1st century AD — Dioscorides writings</li>
+            <li>1820 — Pure isolation by Pelletier & Caventou</li>
+            <li>2009 — FDA approved for gout</li>
+          </ul>
+        </div>
+        <div class="about-card glass-card reveal">
+          <div class="card-icon violet">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <h3>Physical Properties</h3>
+          <p>Colchicine appears as pale yellow crystals or powder. It is soluble in water, ethanol, and chloroform, but practically insoluble in ether — a key property exploited during its extraction.</p>
+          <ul class="card-list">
+            <li>Melting point: 142–150°C</li>
+            <li>Solubility: Water, EtOH, CHCl₃</li>
+            <li>Optical rotation: [α]D = −121°</li>
+            <li>Appearance: Pale yellow crystals</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Molecule Structure -->
+      <div class="molecule-section reveal">
+        <div class="molecule-info">
+          <h3>Molecular Architecture</h3>
+          <p>Colchicine's unique tricyclic structure is responsible for its potent biological activity. The three fused rings — a trimethoxybenzene ring (A), a tropolone ring (B), and an acetamido methoxy ring (C) — work in concert to inhibit tubulin polymerization.</p>
+          <div class="mol-props-grid">
+            <div class="mol-prop"><span class="prop-key">Formula</span><span class="prop-val mono">C₂₂H₂₅NO₆</span></div>
+            <div class="mol-prop"><span class="prop-key">MW</span><span class="prop-val mono">399.44 g/mol</span></div>
+            <div class="mol-prop"><span class="prop-key">LogP</span><span class="prop-val mono">1.30</span></div>
+            <div class="mol-prop"><span class="prop-key">H-Bond Donors</span><span class="prop-val mono">1</span></div>
+            <div class="mol-prop"><span class="prop-key">H-Bond Acceptors</span><span class="prop-val mono">6</span></div>
+            <div class="mol-prop"><span class="prop-key">Rotatable Bonds</span><span class="prop-val mono">5</span></div>
+          </div>
+        </div>
+        <div class="molecule-visual">
+          <div class="ring-diagram">
+            <div class="ring ring-a" data-label="Ring A">
+              <span>A</span>
+              <div class="ring-info">Trimethoxybenzene<br/>Aromatic Ring</div>
+            </div>
+            <div class="ring-connector"></div>
+            <div class="ring ring-b" data-label="Ring B">
+              <span>B</span>
+              <div class="ring-info">Tropolone Ring<br/>7-membered</div>
+            </div>
+            <div class="ring-connector"></div>
+            <div class="ring ring-c" data-label="Ring C">
+              <span>C</span>
+              <div class="ring-info">Acetamido Methoxy<br/>Ring</div>
+            </div>
+          </div>
+          <p class="ring-caption">Tricyclic tropolone ring system of Colchicine</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PLANT ===== -->
+  <section id="plant" class="section plant-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Botanical Source</span>
+        <h2 class="section-title">The Plant: <em>Colchicum autumnale</em></h2>
+        <p class="section-subtitle">The Autumn Crocus — a deceptively beautiful yet highly toxic plant from the Colchicaceae family</p>
+      </div>
+      <div class="plant-layout">
+        <div class="plant-image-wrapper reveal">
+          <div class="plant-img-card glass-card">
+            <div class="plant-img-placeholder">
+              <div class="flower-art">
+                <div class="flower-petal p1"></div>
+                <div class="flower-petal p2"></div>
+                <div class="flower-petal p3"></div>
+                <div class="flower-petal p4"></div>
+                <div class="flower-petal p5"></div>
+                <div class="flower-petal p6"></div>
+                <div class="flower-center"></div>
+              </div>
+              <div class="corm-art">
+                <div class="corm-body"></div>
+                <div class="corm-root r1"></div>
+                <div class="corm-root r2"></div>
+                <div class="corm-root r3"></div>
+                <div class="corm-label">Corm (Underground Storage Organ)</div>
+              </div>
+            </div>
+            <div class="plant-taxonomy">
+              <table class="taxonomy-table">
+                <tr><th>Kingdom</th><td>Plantae</td></tr>
+                <tr><th>Order</th><td>Liliales</td></tr>
+                <tr><th>Family</th><td>Colchicaceae</td></tr>
+                <tr><th>Genus</th><td><em>Colchicum</em></td></tr>
+                <tr><th>Species</th><td><em>C. autumnale</em></td></tr>
+                <tr><th>Common Name</th><td>Autumn Crocus, Meadow Saffron</td></tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="plant-info reveal">
+          <div class="info-block">
+            <h3>Description &amp; Habitat</h3>
+            <p><em>Colchicum autumnale</em>, commonly known as autumn crocus or meadow saffron, is a perennial flowering plant native to <strong>Europe and North Africa</strong>. It grows in meadows, woodland edges, and damp grasslands at altitudes up to 2,000 meters.</p>
+            <p>The plant blooms in autumn, producing striking lilac-pink flowers that emerge <em>without leaves</em> — a phenomenon called <strong>hysteranthy</strong>. Leaves appear in spring, followed by a seed capsule. The underground corm (bulb-like organ) is the primary source for colchicine extraction.</p>
+          </div>
+          <div class="info-block">
+            <h3>Colchicine Distribution in Plant Parts</h3>
+            <div class="distribution-bars">
+              <div class="dist-item">
+                <span class="dist-label">Seeds</span>
+                <div class="dist-bar-wrap"><div class="dist-bar" style="--w: 90%"></div></div>
+                <span class="dist-pct">~0.8%</span>
+              </div>
+              <div class="dist-item">
+                <span class="dist-label">Corms</span>
+                <div class="dist-bar-wrap"><div class="dist-bar" style="--w: 75%"></div></div>
+                <span class="dist-pct">~0.6%</span>
+              </div>
+              <div class="dist-item">
+                <span class="dist-label">Flowers</span>
+                <div class="dist-bar-wrap"><div class="dist-bar" style="--w: 55%"></div></div>
+                <span class="dist-pct">~0.4%</span>
+              </div>
+              <div class="dist-item">
+                <span class="dist-label">Leaves</span>
+                <div class="dist-bar-wrap"><div class="dist-bar" style="--w: 25%"></div></div>
+                <span class="dist-pct">~0.2%</span>
+              </div>
+            </div>
+          </div>
+          <div class="info-block">
+            <h3>Other Sources</h3>
+            <div class="sources-grid">
+              <div class="source-chip">C. speciosum</div>
+              <div class="source-chip">C. variegatum</div>
+              <div class="source-chip">C. byzantinum</div>
+              <div class="source-chip">Gloriosa superba</div>
+            </div>
+            <p class="note">⚠️ <em>Gloriosa superba</em> (glory lily) is also a significant commercial source of colchicine, especially in Asia.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXTRACTION ===== -->
+  <section id="extraction" class="section extraction-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Phytochemistry</span>
+        <h2 class="section-title">Extraction &amp; Isolation Methods</h2>
+        <p class="section-subtitle">From plant material to pure crystalline alkaloid — a journey through pharmaceutical chemistry</p>
+      </div>
+
+      <!-- Timeline -->
+      <div class="extraction-timeline">
+        <div class="timeline-item reveal" data-step="1">
+          <div class="timeline-icon step-1">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <div class="timeline-content glass-card">
+            <span class="step-badge">Step 01</span>
+            <h3>Raw Material Preparation</h3>
+            <p>Corms or seeds of <em>Colchicum autumnale</em> are collected, cleaned, and dried. The material is then coarsely powdered to increase surface area for extraction. Seeds are preferred due to higher alkaloid content (~0.8% by dry weight).</p>
+            <div class="step-details">
+              <div class="detail-chip"><span>🌿</span> Drying at 40–50°C</div>
+              <div class="detail-chip"><span>⚙️</span> Particle size: 1–2 mm</div>
+              <div class="detail-chip"><span>📊</span> Moisture content &lt; 10%</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" data-step="2">
+          <div class="timeline-icon step-2">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <div class="timeline-content glass-card">
+            <span class="step-badge">Step 02</span>
+            <h3>Solvent Extraction (Maceration / Soxhlet)</h3>
+            <p>The powdered plant material is extracted using suitable solvents. Two primary methods are employed:</p>
+            <div class="method-cards">
+              <div class="method-card">
+                <h4>Maceration</h4>
+                <p>Plant material + 70–95% ethanol. Soaked 24–72 hours at room temperature. Simple but lower efficiency.</p>
+                <span class="method-tag">Classical</span>
+              </div>
+              <div class="method-card">
+                <h4>Soxhlet Extraction</h4>
+                <p>Continuous hot solvent extraction using 70% ethanol or methanol. Higher yield, cycles for 6–8 hours. Most commonly used.</p>
+                <span class="method-tag preferred">Preferred</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" data-step="3">
+          <div class="timeline-icon step-3">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <div class="timeline-content glass-card">
+            <span class="step-badge">Step 03</span>
+            <h3>Defatting &amp; Purification</h3>
+            <p>The alcohol filtrate is evaporated under reduced pressure. The residue is dissolved in water and defatted with petroleum ether to remove lipophilic compounds (fats, waxes, chlorophylls).</p>
+            <div class="step-details">
+              <div class="detail-chip"><span>🧪</span> Petroleum ether defatting</div>
+              <div class="detail-chip"><span>🔄</span> Rotary evaporation</div>
+              <div class="detail-chip"><span>🌡️</span> 40°C under vacuum</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" data-step="4">
+          <div class="timeline-icon step-4">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </div>
+          <div class="timeline-content glass-card">
+            <span class="step-badge">Step 04</span>
+            <h3>Alkaloid Basification &amp; Transfer</h3>
+            <p>The aqueous fraction is basified to pH 8–9 using dilute ammonia (NH₄OH) or sodium carbonate. At this pH, colchicine (non-basic alkaloid — unusual!) and other alkaloids are extracted into chloroform or dichloromethane.</p>
+            <div class="step-details">
+              <div class="detail-chip"><span>⚗️</span> NH₄OH basification</div>
+              <div class="detail-chip"><span>🧫</span> pH adjusted to 8–9</div>
+              <div class="detail-chip"><span>💧</span> Chloroform partition</div>
+            </div>
+            <div class="highlight-box">
+              <strong>Note:</strong> Colchicine is unique — it is a <em>non-basic alkaloid</em> (tropolone type), so it behaves differently from typical alkaloids during acid-base extraction — it is neutral and soluble in both polar and non-polar solvents.
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" data-step="5">
+          <div class="timeline-icon step-5">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <div class="timeline-content glass-card">
+            <span class="step-badge">Step 05</span>
+            <h3>Chromatographic Purification</h3>
+            <p>The organic layer (chloroform extract) is concentrated and subjected to column chromatography using silica gel to separate colchicine from co-extracted compounds. HPLC is used for final purity assessment.</p>
+            <div class="chroma-info">
+              <div class="chroma-card">
+                <h4>Column Chromatography</h4>
+                <ul>
+                  <li>Stationary phase: Silica gel 60</li>
+                  <li>Mobile phase: CHCl₃ : MeOH (9:1)</li>
+                  <li>Monitoring: TLC, UV 254 nm</li>
+                </ul>
+              </div>
+              <div class="chroma-card">
+                <h4>HPLC Analysis</h4>
+                <ul>
+                  <li>Column: C18 reversed phase</li>
+                  <li>Mobile phase: ACN : H₂O (30:70)</li>
+                  <li>Detection: UV 254 nm</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" data-step="6">
+          <div class="timeline-icon step-6">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" stroke="currentColor" stroke-width="1.5"/></svg>
+          </div>
+          <div class="timeline-content glass-card">
+            <span class="step-badge">Step 06</span>
+            <h3>Crystallization &amp; Final Product</h3>
+            <p>Colchicine-rich fractions are pooled, concentrated, and crystallized from ethyl acetate or acetone. The pale yellow crystals are collected by filtration, washed, and dried. Purity is confirmed by HPLC (&gt;98%) and melting point.</p>
+            <div class="final-specs">
+              <div class="spec">
+                <span class="spec-label">Yield</span>
+                <span class="spec-value">0.5–1.5%</span>
+              </div>
+              <div class="spec">
+                <span class="spec-label">Purity</span>
+                <span class="spec-value">&gt;98%</span>
+              </div>
+              <div class="spec">
+                <span class="spec-label">MP</span>
+                <span class="spec-value">142–150°C</span>
+              </div>
+              <div class="spec">
+                <span class="spec-label">Color</span>
+                <span class="spec-value">Pale Yellow</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Extraction image -->
+      <div class="extraction-image-wrap reveal">
+        <img src="assets/extraction_process.png" alt="Colchicine laboratory extraction process" class="section-image" />
+        <div class="img-caption">Laboratory extraction and purification workflow for colchicine isolation</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PHARMACOLOGY ===== -->
+  <section id="pharmacology" class="section pharma-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Mechanism of Action</span>
+        <h2 class="section-title">Pharmacology</h2>
+        <p class="section-subtitle">Understanding how colchicine disrupts cellular processes at the molecular level</p>
+      </div>
+
+      <div class="moa-container">
+        <div class="moa-main glass-card reveal">
+          <h3>Primary Mechanism: Tubulin Binding</h3>
+          <p>Colchicine's primary mechanism involves <strong>binding to β-tubulin</strong> at the colchicine-binding site — a distinct site from where other anti-tubulin drugs (like vincristine or taxol) bind. This disrupts microtubule dynamics.</p>
+
+          <div class="moa-steps">
+            <div class="moa-step">
+              <div class="moa-num">01</div>
+              <div class="moa-text">
+                <h4>Tubulin Dimer Binding</h4>
+                <p>Colchicine binds to free α/β-tubulin heterodimers at the β-tubulin subunit's colchicine site with high affinity (Kd ≈ 10⁻⁶ M) in a slow, tight, and partially reversible manner.</p>
+              </div>
+            </div>
+            <div class="moa-step">
+              <div class="moa-num">02</div>
+              <div class="moa-text">
+                <h4>Microtubule Dynamics Disruption</h4>
+                <p>The colchicine-tubulin complex incorporates into growing microtubule ends, causing a structural "conformational cap" that <em>prevents further polymerization</em> — effectively capping the microtubule ends.</p>
+              </div>
+            </div>
+            <div class="moa-step">
+              <div class="moa-num">03</div>
+              <div class="moa-text">
+                <h4>Mitotic Arrest</h4>
+                <p>Without functional microtubules, the <strong>mitotic spindle cannot form</strong>. Cells are arrested in metaphase of mitosis (M-phase arrest), preventing cell division. This underlies both its anti-inflammatory and anti-cancer activities.</p>
+              </div>
+            </div>
+            <div class="moa-step">
+              <div class="moa-num">04</div>
+              <div class="moa-text">
+                <h4>Anti-Inflammatory Effects</h4>
+                <p>In neutrophils, colchicine disrupts microtubule-dependent migration and NALP3 inflammasome assembly, inhibiting <strong>IL-1β secretion</strong>, degranulation, and superoxide generation — key mediators of gout-related inflammation.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="moa-sidebar">
+          <div class="pharma-card glass-card reveal">
+            <h3>Pharmacokinetics</h3>
+            <div class="pk-grid">
+              <div class="pk-item">
+                <span class="pk-label">Absorption</span>
+                <span class="pk-val">Rapid oral absorption (1–2 hrs)</span>
+              </div>
+              <div class="pk-item">
+                <span class="pk-label">Bioavailability</span>
+                <span class="pk-val">~45%</span>
+              </div>
+              <div class="pk-item">
+                <span class="pk-label">Plasma binding</span>
+                <span class="pk-val">39–50%</span>
+              </div>
+              <div class="pk-item">
+                <span class="pk-label">Volume of Dist.</span>
+                <span class="pk-val">5–8 L/kg</span>
+              </div>
+              <div class="pk-item">
+                <span class="pk-label">Metabolism</span>
+                <span class="pk-val">Liver (CYP3A4)</span>
+              </div>
+              <div class="pk-item">
+                <span class="pk-label">Half-life</span>
+                <span class="pk-val">26–31 hours</span>
+              </div>
+              <div class="pk-item">
+                <span class="pk-label">Excretion</span>
+                <span class="pk-val">Fecal (40–65%), Renal</span>
+              </div>
+              <div class="pk-item">
+                <span class="pk-label">Transporter</span>
+                <span class="pk-val">P-glycoprotein substrate</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pharma-card glass-card reveal">
+            <h3>Key Drug Interactions</h3>
+            <div class="interaction-list">
+              <div class="interaction-item danger">
+                <span class="int-icon">⚠️</span>
+                <div>
+                  <strong>CYP3A4 inhibitors</strong>
+                  <p>Clarithromycin, ketoconazole → Toxic colchicine levels</p>
+                </div>
+              </div>
+              <div class="interaction-item warning">
+                <span class="int-icon">⚡</span>
+                <div>
+                  <strong>P-gp inhibitors</strong>
+                  <p>Cyclosporin → Increased absorption</p>
+                </div>
+              </div>
+              <div class="interaction-item warning">
+                <span class="int-icon">💊</span>
+                <div>
+                  <strong>Statins</strong>
+                  <p>Myopathy risk when co-administered</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== THERAPEUTIC USES ===== -->
+  <section id="therapeutic" class="section therapeutic-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Clinical Applications</span>
+        <h2 class="section-title">Therapeutic Uses</h2>
+        <p class="section-subtitle">From treating ancient diseases to cutting-edge research — colchicine's remarkable clinical versatility</p>
+      </div>
+
+      <div class="therapeutic-image-wrap reveal">
+        <img src="assets/therapeutic_uses.png" alt="Colchicine therapeutic applications" class="section-image" />
+      </div>
+
+      <div class="use-cards-grid">
+        <!-- Gout -->
+        <div class="use-card glass-card reveal" id="use-gout">
+          <div class="use-header">
+            <div class="use-icon gout-icon">🦴</div>
+            <div>
+              <span class="use-status approved">FDA Approved</span>
+              <h3>Acute Gout &amp; Prophylaxis</h3>
+            </div>
+          </div>
+          <p>Colchicine is the first-line treatment for acute gout flares. It inhibits neutrophil migration into joints and blocks NALP3 inflammasome activation, reducing urate crystal-induced inflammation rapidly.</p>
+          <div class="use-details">
+            <div class="use-detail"><span>Dose:</span> 1.2 mg initially, then 0.6 mg 1 hr later</div>
+            <div class="use-detail"><span>Onset:</span> 12–24 hours</div>
+            <div class="use-detail"><span>Brand:</span> Colcrys®, Mitigare®</div>
+          </div>
+          <div class="evidence-bar">
+            <span>Evidence Level</span>
+            <div class="evidence-fill" style="--fill: 95%"></div>
+            <span class="ev-pct">High (A)</span>
+          </div>
+        </div>
+
+        <!-- FMF -->
+        <div class="use-card glass-card reveal" id="use-fmf">
+          <div class="use-header">
+            <div class="use-icon fmf-icon">🧬</div>
+            <div>
+              <span class="use-status approved">FDA Approved</span>
+              <h3>Familial Mediterranean Fever (FMF)</h3>
+            </div>
+          </div>
+          <p>Colchicine is the drug of choice for FMF — a hereditary auto-inflammatory disorder. It prevents recurring episodes of fever, peritonitis, pleuritis, and arthritis, and crucially prevents amyloid A amyloidosis — a life-threatening complication.</p>
+          <div class="use-details">
+            <div class="use-detail"><span>Dose:</span> 1.2–2.4 mg/day (adults)</div>
+            <div class="use-detail"><span>Duration:</span> Life-long therapy</div>
+            <div class="use-detail"><span>Response:</span> &gt;90% patients</div>
+          </div>
+          <div class="evidence-bar">
+            <span>Evidence Level</span>
+            <div class="evidence-fill" style="--fill: 98%"></div>
+            <span class="ev-pct">High (A)</span>
+          </div>
+        </div>
+
+        <!-- Pericarditis -->
+        <div class="use-card glass-card reveal" id="use-peri">
+          <div class="use-header">
+            <div class="use-icon peri-icon">❤️</div>
+            <div>
+              <span class="use-status approved">FDA Approved</span>
+              <h3>Pericarditis (Acute &amp; Recurrent)</h3>
+            </div>
+          </div>
+          <p>The COPE and ICAP trials demonstrated colchicine's efficacy in acute pericarditis, reducing the rate of recurrence by ~50%. It is now a standard add-on to NSAIDs/aspirin for both acute and recurrent pericarditis.</p>
+          <div class="use-details">
+            <div class="use-detail"><span>Dose:</span> 0.5 mg twice daily (≥70kg)</div>
+            <div class="use-detail"><span>Duration:</span> 3 months (acute), 6 months (recurrent)</div>
+            <div class="use-detail"><span>NNT:</span> ~8 patients</div>
+          </div>
+          <div class="evidence-bar">
+            <span>Evidence Level</span>
+            <div class="evidence-fill" style="--fill: 90%"></div>
+            <span class="ev-pct">High (A)</span>
+          </div>
+        </div>
+
+        <!-- CV -->
+        <div class="use-card glass-card reveal" id="use-cv">
+          <div class="use-header">
+            <div class="use-icon cv-icon">💓</div>
+            <div>
+              <span class="use-status emerging">Emerging</span>
+              <h3>Cardiovascular Disease</h3>
+            </div>
+          </div>
+          <p>The COLCOT and LoDoCo2 trials showed colchicine (0.5 mg/day) significantly reduces major adverse cardiovascular events (MACE) in post-MI and stable coronary artery disease patients, likely through inflammasome inhibition.</p>
+          <div class="use-details">
+            <div class="use-detail"><span>Trials:</span> COLCOT, LoDoCo2</div>
+            <div class="use-detail"><span>Dose:</span> 0.5 mg/day (Lodoco®)</div>
+            <div class="use-detail"><span>Approved:</span> Australia, Canada, EU (2023)</div>
+          </div>
+          <div class="evidence-bar">
+            <span>Evidence Level</span>
+            <div class="evidence-fill" style="--fill: 85%"></div>
+            <span class="ev-pct">High (A)</span>
+          </div>
+        </div>
+
+        <!-- Behcet -->
+        <div class="use-card glass-card reveal" id="use-behcet">
+          <div class="use-header">
+            <div class="use-icon behcet-icon">🔬</div>
+            <div>
+              <span class="use-status off-label">Off-Label</span>
+              <h3>Behçet's Disease</h3>
+            </div>
+          </div>
+          <p>Colchicine is used to manage orogenital ulcers, skin lesions, and arthritis in Behçet's disease — a rare systemic vasculitis. International guidelines recommend it as first-line for mucocutaneous involvement.</p>
+          <div class="use-details">
+            <div class="use-detail"><span>Dose:</span> 1–2 mg/day</div>
+            <div class="use-detail"><span>Target:</span> Mucocutaneous lesions</div>
+            <div class="use-detail"><span>Response:</span> Moderate to good</div>
+          </div>
+          <div class="evidence-bar">
+            <span>Evidence Level</span>
+            <div class="evidence-fill" style="--fill: 75%"></div>
+            <span class="ev-pct">Moderate (B)</span>
+          </div>
+        </div>
+
+        <!-- Cancer -->
+        <div class="use-card glass-card reveal" id="use-cancer">
+          <div class="use-header">
+            <div class="use-icon cancer-icon">🧫</div>
+            <div>
+              <span class="use-status research">Research</span>
+              <h3>Anti-Cancer Research</h3>
+            </div>
+          </div>
+          <p>Due to its potent anti-mitotic activity, colchicine and its derivatives (thiocolchicine, combretastatin) are investigated as vascular-disrupting agents in various cancers. Colchicine itself is too toxic for systemic cancer use, but prodrugs show promise.</p>
+          <div class="use-details">
+            <div class="use-detail"><span>Targets:</span> Solid tumors, melanoma</div>
+            <div class="use-detail"><span>Approach:</span> Colchicine prodrugs</div>
+            <div class="use-detail"><span>Status:</span> Phase I/II trials</div>
+          </div>
+          <div class="evidence-bar">
+            <span>Evidence Level</span>
+            <div class="evidence-fill" style="--fill: 50%"></div>
+            <span class="ev-pct">Investigational</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- COVID-19 note -->
+      <div class="covid-note glass-card reveal">
+        <div class="covid-icon">🦠</div>
+        <div>
+          <h3>COVID-19 Research</h3>
+          <p>During the COVID-19 pandemic, colchicine was investigated as a potential immunomodulatory therapy. The COLCORONA trial showed a modest reduction in hospitalization risk in non-hospitalized COVID-19 patients. While not widely adopted, it highlighted colchicine's broad anti-inflammatory potential.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TOXICOLOGY ===== -->
+  <section id="toxicology" class="section tox-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Safety Profile</span>
+        <h2 class="section-title">Toxicology &amp; Safety</h2>
+        <p class="section-subtitle">Understanding the narrow therapeutic window and managing colchicine toxicity</p>
+      </div>
+
+      <div class="tox-grid">
+        <div class="tox-card glass-card reveal">
+          <div class="tox-header">
+            <span class="tox-icon">⚠️</span>
+            <h3>Common Adverse Effects</h3>
+          </div>
+          <div class="tox-list">
+            <div class="tox-item mild">
+              <span class="tox-severity">Mild</span>
+              <div class="tox-items-list">
+                <span>Nausea</span><span>Vomiting</span><span>Diarrhea</span><span>Abdominal cramps</span>
+              </div>
+            </div>
+            <div class="tox-item moderate">
+              <span class="tox-severity">Moderate</span>
+              <div class="tox-items-list">
+                <span>Myopathy</span><span>Peripheral neuropathy</span><span>Bone marrow suppression</span>
+              </div>
+            </div>
+            <div class="tox-item severe">
+              <span class="tox-severity">Severe</span>
+              <div class="tox-items-list">
+                <span>Multi-organ failure</span><span>Cardiac arrhythmias</span><span>Respiratory failure</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tox-card glass-card reveal">
+          <div class="tox-header">
+            <span class="tox-icon">💊</span>
+            <h3>Dosing &amp; Therapeutic Window</h3>
+          </div>
+          <p>Colchicine has a <strong>narrow therapeutic index</strong>. Therapeutic doses and toxic doses overlap significantly, making careful dosing essential.</p>
+          <div class="dose-window">
+            <div class="dose-bar therapeutic" style="--start: 0%;--width: 35%">
+              <span>Therapeutic: 0.6–1.8 mg/day</span>
+            </div>
+            <div class="dose-bar toxic" style="--start: 28%;--width: 42%">
+              <span>Toxic: &gt;0.5 mg/kg total</span>
+            </div>
+            <div class="dose-bar lethal" style="--start: 60%;--width: 30%">
+              <span>Lethal: ~0.8 mg/kg</span>
+            </div>
+          </div>
+          <p class="dose-note">LD₅₀ (human estimated): ~0.8 mg/kg body weight</p>
+        </div>
+
+        <div class="tox-card glass-card reveal">
+          <div class="tox-header">
+            <span class="tox-icon">🚫</span>
+            <h3>Contraindications</h3>
+          </div>
+          <ul class="contraindication-list">
+            <li>Severe renal impairment (CrCl &lt; 30 mL/min) — dose adjust or avoid</li>
+            <li>Severe hepatic impairment</li>
+            <li>Concurrent strong CYP3A4 + P-gp inhibitors</li>
+            <li>Pregnancy (Category C) — use with caution</li>
+            <li>Known hypersensitivity to colchicine</li>
+          </ul>
+        </div>
+
+        <div class="tox-card glass-card reveal">
+          <div class="tox-header">
+            <span class="tox-icon">🏥</span>
+            <h3>Management of Overdose</h3>
+          </div>
+          <p>No specific antidote exists. Management is <strong>entirely supportive</strong>:</p>
+          <ul class="management-list">
+            <li><strong>GI decontamination</strong> (if early presentation)</li>
+            <li><strong>IV fluids</strong> and electrolyte monitoring</li>
+            <li><strong>Cardiac monitoring</strong> — watch for arrhythmias</li>
+            <li><strong>G-CSF/GM-CSF</strong> for bone marrow suppression</li>
+            <li><strong>Hemodialysis</strong> — NOT effective (high protein binding)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== REFERENCES ===== -->
+  <section id="references" class="section ref-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Bibliography</span>
+        <h2 class="section-title">References</h2>
+        <p class="section-subtitle">Scientific literature and clinical evidence supporting this portfolio</p>
+      </div>
+      <div class="references-grid">
+        <div class="ref-card glass-card reveal">
+          <span class="ref-num">01</span>
+          <p>Finkelstein Y, et al. (2010). <em>Colchicine poisoning: the dark side of an ancient drug</em>. Clinical Toxicology, 48(5):407–414.</p>
+        </div>
+        <div class="ref-card glass-card reveal">
+          <span class="ref-num">02</span>
+          <p>Leung YY, et al. (2015). <em>Colchicine — Update on mechanisms of action and therapeutic uses</em>. Seminars in Arthritis and Rheumatism, 45(3):341–350.</p>
+        </div>
+        <div class="ref-card glass-card reveal">
+          <span class="ref-num">03</span>
+          <p>Imazio M, et al. (2013). <em>A Randomized Trial of Colchicine for Acute Pericarditis</em> (ICAP Trial). NEJM, 369(16):1522–1528.</p>
+        </div>
+        <div class="ref-card glass-card reveal">
+          <span class="ref-num">04</span>
+          <p>Tardif JC, et al. (2019). <em>Efficacy and safety of low-dose colchicine after myocardial infarction</em> (COLCOT Trial). NEJM, 381(26):2497–2505.</p>
+        </div>
+        <div class="ref-card glass-card reveal">
+          <span class="ref-num">05</span>
+          <p>Nidorf SM, et al. (2020). <em>Colchicine in Patients with Chronic Coronary Disease</em> (LoDoCo2 Trial). NEJM, 383(19):1838–1847.</p>
+        </div>
+        <div class="ref-card glass-card reveal">
+          <span class="ref-num">06</span>
+          <p>Bhatt DL, et al. (2021). <em>Colchicine in acute myocardial infarction</em>. NEJM, 384(5):456–464.</p>
+        </div>
+        <div class="ref-card glass-card reveal">
+          <span class="ref-num">07</span>
+          <p>Katzung BG. (2018). <em>Basic and Clinical Pharmacology</em>, 14th ed. McGraw-Hill Education.</p>
+        </div>
+        <div class="ref-card glass-card reveal">
+          <span class="ref-num">08</span>
+          <p>Evans WC. (2009). <em>Trease and Evans' Pharmacognosy</em>, 16th ed. Edinburgh: Saunders/Elsevier.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="20" cy="20" r="8" stroke="url(#grad2)" stroke-width="2"/>
+              <circle cx="20" cy="8" r="3" fill="url(#grad2)"/>
+              <circle cx="30" cy="26" r="3" fill="url(#grad2)"/>
+              <circle cx="10" cy="26" r="3" fill="url(#grad2)"/>
+              <defs>
+                <linearGradient id="grad2" x1="0" y1="0" x2="40" y2="40">
+                  <stop offset="0%" stop-color="#a855f7"/>
+                  <stop offset="100%" stop-color="#06b6d4"/>
+                </linearGradient>
+              </defs>
+            </svg>
+            <span>Colchicine</span>
+          </div>
+          <p>A comprehensive pharmacognosy portfolio exploring the science of <em>Colchicum autumnale</em>.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Sections</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#plant">The Plant</a></li>
+            <li><a href="#extraction">Extraction</a></li>
+            <li><a href="#pharmacology">Pharmacology</a></li>
+            <li><a href="#therapeutic">Therapeutic Uses</a></li>
+            <li><a href="#toxicology">Toxicology</a></li>
+          </ul>
+        </div>
+        <div class="footer-disclaimer">
+          <h4>Disclaimer</h4>
+          <p>This portfolio is for <strong>educational and research purposes only</strong>. It does not constitute medical advice. Always consult qualified healthcare professionals for medical decisions.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Colchicine Pharmacognosy Portfolio. Educational Research Content.</p>
+        <p class="formula">C₂₂H₂₅NO₆ · MW 399.44 g/mol</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none"><path d="M18 15l-6-6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+  </button>
+
+  <script src="main.js"></script>
+</body>
+</html>
