@@ -1,0 +1,1514 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="A comprehensive scientific portfolio on Colchicine — the alkaloid from Colchicum autumnale. Explore its extraction methods, pharmacology, and therapeutic applications." />
+  <title>Colchicine | Pharmacognosy Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ===== LOADER ===== -->
+  <div id="loader" class="loader">
+    <div class="loader-inner">
+      <div class="loader-molecule">
+        <div class="atom atom-1"></div>
+        <div class="atom atom-2"></div>
+        <div class="atom atom-3"></div>
+        <div class="atom atom-4"></div>
+        <div class="atom-center"></div>
+      </div>
+      <p class="loader-text">Loading Colchicine</p>
+      <div class="loader-bar">
+        <div class="loader-fill"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== CURSOR ===== -->
+  <div id="cursor-dot" class="cursor-dot"></div>
+  <div id="cursor-ring" class="cursor-ring"></div>
+
+  <!-- ===== PARTICLES ===== -->
+  <canvas id="particles-canvas"></canvas>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar" class="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="20" cy="20" r="8" stroke="url(#grad1)" stroke-width="2" />
+            <circle cx="20" cy="8" r="3" fill="url(#grad1)" />
+            <circle cx="30" cy="26" r="3" fill="url(#grad1)" />
+            <circle cx="10" cy="26" r="3" fill="url(#grad1)" />
+            <line x1="20" y1="11" x2="20" y2="12" stroke="url(#grad1)" stroke-width="2" />
+            <line x1="27.5" y1="23.7" x2="28.5" y2="22" stroke="url(#grad1)" stroke-width="2" />
+            <line x1="12.5" y1="23.7" x2="11.5" y2="22" stroke="url(#grad1)" stroke-width="2" />
+            <defs>
+              <linearGradient id="grad1" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+                <stop offset="0%" stop-color="#a855f7" />
+                <stop offset="100%" stop-color="#06b6d4" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span>Colchicine</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#hero" class="nav-link" data-id="hero">Home</a></li>
+        <li><a href="#about" class="nav-link" data-id="about">About</a></li>
+        <li><a href="#plant" class="nav-link" data-id="plant">The Plant</a></li>
+        <li><a href="#extraction" class="nav-link" data-id="extraction">Extraction</a></li>
+        <li><a href="#pharmacology" class="nav-link" data-id="pharmacology">Pharmacology</a></li>
+        <li><a href="#therapeutic" class="nav-link" data-id="therapeutic">Therapeutic Uses</a></li>
+        <li><a href="#toxicology" class="nav-link" data-id="toxicology">Toxicology</a></li>
+        <li><a href="#references" class="nav-link" data-id="references">References</a></li>
+        <li><a href="#team" class="nav-link" data-id="team">Team</a></li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="hero" class="hero">
+    <div class="hero-bg">
+      <img src="assets/colchicine_hero.png" alt="Colchicum autumnale botanical illustration" class="hero-bg-img" />
+      <div class="hero-bg-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>Pharmacognosy Research</span>
+      </div>
+      <h1 class="hero-title">
+        <span class="title-sub">Discovering</span>
+        <span class="title-main">Colchicine</span>
+        <span class="title-tag">C<sub>22</sub>H<sub>25</sub>NO<sub>6</sub></span>
+      </h1>
+      <p class="hero-desc">A powerful tropolone alkaloid derived from <em>Colchicum autumnale</em> — one of nature's
+        most fascinating and potent medicinal compounds. From ancient remedy to modern medicine.</p>
+      <div class="hero-stats">
+        <div class="stat-card">
+          <span class="stat-num">~1820</span>
+          <span class="stat-label">Year Isolated</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">399.4</span>
+          <span class="stat-label">Mol. Weight (g/mol)</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-num">3+</span>
+          <span class="stat-label">FDA Indications</span>
+        </div>
+      </div>
+      <div class="hero-cta">
+        <a href="#about" class="btn-primary" id="hero-explore-btn">Explore Research</a>
+        <a href="#extraction" class="btn-ghost">Extraction Methods</a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Scroll to explore</span>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Overview</span>
+        <h2 class="section-title">What is Colchicine?</h2>
+        <p class="section-subtitle">A naturally occurring alkaloid with a rich history spanning over two millennia of
+          medical use</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-card glass-card reveal">
+          <div class="card-icon purple">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+            </svg>
+          </div>
+          <h3>Classification</h3>
+          <p>Colchicine belongs to the <strong>tropolone alkaloid</strong> family. It is a naturally occurring secondary
+            metabolite with a unique tricyclic ring structure — rings A (benzene), B (tropolone), and C (acetamido
+            methoxy).</p>
+          <ul class="card-list">
+            <li>Kingdom: Plantae</li>
+            <li>Family: Colchicaceae</li>
+            <li>Type: Tropolone alkaloid</li>
+            <li>CAS Number: 64-86-8</li>
+          </ul>
+        </div>
+        <div class="about-card glass-card reveal">
+          <div class="card-icon cyan">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M12 6v6l4 2m6-2a10 10 0 11-20 0 10 10 0 0120 0z" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" />
+            </svg>
+          </div>
+          <h3>Historical Background</h3>
+          <p>The use of <em>Colchicum autumnale</em> dates back to <strong>1500 BC</strong>, documented in the Ebers
+            Papyrus of ancient Egypt for treating joint swelling. Greek physician Dioscorides described its use in the
+            1st century AD.</p>
+          <ul class="card-list">
+            <li>1500 BC — Ebers Papyrus records</li>
+            <li>1st century AD — Dioscorides writings</li>
+            <li>1820 — Pure isolation by Pelletier & Caventou</li>
+            <li>2009 — FDA approved for gout</li>
+          </ul>
+        </div>
+        <div class="about-card glass-card reveal">
+          <div class="card-icon violet">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+                stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+            </svg>
+          </div>
+          <h3>Physical Properties</h3>
+          <p>Colchicine appears as pale yellow crystals or powder. It is soluble in water, ethanol, and chloroform, but
+            practically insoluble in ether — a key property exploited during its extraction.</p>
+          <ul class="card-list">
+            <li>Melting point: 142–150°C</li>
+            <li>Solubility: Water, EtOH, CHCl₃</li>
+            <li>Optical rotation: [α]D = −121°</li>
+            <li>Appearance: Pale yellow crystals</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Molecule Structure -->
+      <div class="molecule-section reveal">
+        <div class="molecule-info">
+          <h3>Molecular Architecture</h3>
+          <p>Colchicine's unique tricyclic structure is responsible for its potent biological activity. The three fused
+            rings — a trimethoxybenzene ring (A), a tropolone ring (B), and an acetamido methoxy ring (C) — work in
+            concert to inhibit tubulin polymerization.</p>
+          <div class="mol-props-grid">
+            <div class="mol-prop"><span class="prop-key">Formula</span><span class="prop-val mono">C₂₂H₂₅NO₆</span>
+            </div>
+            <div class="mol-prop"><span class="prop-key">MW</span><span class="prop-val mono">399.44 g/mol</span></div>
+            <div class="mol-prop"><span class="prop-key">LogP</span><span class="prop-val mono">1.30</span></div>
+            <div class="mol-prop"><span class="prop-key">H-Bond Donors</span><span class="prop-val mono">1</span></div>
+            <div class="mol-prop"><span class="prop-key">H-Bond Acceptors</span><span class="prop-val mono">6</span>
+            </div>
+            <div class="mol-prop"><span class="prop-key">Rotatable Bonds</span><span class="prop-val mono">5</span>
+            </div>
+          </div>
+        </div>
+        <div class="molecule-visual">
+          <!-- Colchicine 2D Skeletal Structure -->
+          <div class="colchicine-structure-wrap">
+            <p class="structure-label-top">2D Skeletal Structure of Colchicine</p>
+            <div class="structure-svg-container">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="80 140 130 110" class="colchicine-svg"
+                aria-label="Colchicine 2D skeletal structure">
+                <defs>
+                  <filter id="glow-a">
+                    <feGaussianBlur stdDeviation="2" result="coloredBlur" />
+                    <feMerge>
+                      <feMergeNode in="coloredBlur" />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                  <filter id="glow-b">
+                    <feGaussianBlur stdDeviation="2" result="coloredBlur" />
+                    <feMerge>
+                      <feMergeNode in="coloredBlur" />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                  <filter id="glow-c">
+                    <feGaussianBlur stdDeviation="2" result="coloredBlur" />
+                    <feMerge>
+                      <feMergeNode in="coloredBlur" />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
+                  </filter>
+                </defs>
+
+                <!-- Ring A -->
+                <polygon points="108.35,167.72 120.83,160 133.3,167.19 133.9,181.81 121.43,189.32 108.65,182.3"
+                  fill="rgba(168,85,247,0.60)" stroke="rgba(168,85,247,0.90)" stroke-width="1.2"
+                  class="ring-highlight ring-highlight-a" filter="url(#glow-a)" />
+                <text x="121" y="175" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="800"
+                  font-family="Outfit, sans-serif" fill="white" class="ring-label-svg">A</text>
+
+                <!-- Ring B -->
+                <polygon
+                  points="133.9,181.81 145.06,191.19 159.26,187.63 165.47,174.75 159.1,161.52 144.78,158.25 133.57,167.19"
+                  fill="rgba(6,182,212,0.60)" stroke="rgba(6,182,212,0.90)" stroke-width="1.2"
+                  class="ring-highlight ring-highlight-b" filter="url(#glow-b)" />
+                <text x="149" y="175" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="800"
+                  font-family="Outfit, sans-serif" fill="white" class="ring-label-svg">B</text>
+
+                <!-- Ring C -->
+                <polygon
+                  points="144.48,191.02 159.26,187.63 170.45,196.56 170.45,211.24 159.22,220.2 144.64,217.14 138.28,203.9"
+                  fill="rgba(251,191,36,0.60)" stroke="rgba(251,191,36,0.90)" stroke-width="1.2"
+                  class="ring-highlight ring-highlight-c" filter="url(#glow-c)" />
+                <text x="155" y="204" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="800"
+                  font-family="Outfit, sans-serif" fill="white" class="ring-label-svg">C</text>
+
+                <!-- Full molecule structure (original SVG paths) -->
+                <g id="page" clip-path="url(#174)">
+                  <g id="Solid">
+                    <path d="m 108.35,167.72 0,0 0.3,-0.17 0.3,0.17 0,14.06 -0.3,0.17 -0.3,-0.17 z"
+                      shape-rendering="geometricPrecision"
+                      style="fill:#e2e8f0;fill-rule:evenodd;stroke:#e2e8f0;stroke-width:0;stroke-linejoin:miter" />
+                    <path style="stroke:#e2e8f0;stroke-width:0.6" d="m 111.24,169.05 0,11.4" />
+                  </g>
+                  <g id="g16">
+                    <path d="m 108.65,182.3 0,0 0,-0.35 0.3,-0.17 12.18,7.02 0,0.35 -0.3,0.17 z"
+                      shape-rendering="geometricPrecision"
+                      style="fill:#e2e8f0;fill-rule:evenodd;stroke:#e2e8f0;stroke-width:0;stroke-linejoin:miter" />
+                  </g>
+                  <g id="g20">
+                    <path d="m 121.43,189.32 0,0 -0.3,-0.17 0,-0.35 12.17,-7.02 0.3,0.17 -0.03,0.36 z"
+                      shape-rendering="geometricPrecision"
+                      style="fill:#e2e8f0;fill-rule:evenodd;stroke:#e2e8f0;stroke-width:0;stroke-linejoin:miter" />
+                    <path style="stroke:#e2e8f0;stroke-width:0.6" d="m 121.13,186.16 9.87999,-5.71" />
+                  </g>
+                  <g id="g26">
+                    <path d="m 133.9,181.81 0,0 -0.3,0.14 -0.3,-0.17 0,-14.06 0.3,-0.17 0.3,0.14 z"
+                      shape-rendering="geometricPrecision"
+                      style="fill:#e2e8f0;fill-rule:evenodd;stroke:#e2e8f0;stroke-width:0;stroke-linejoin:miter" />
+                  </g>
+                  <g id="g30">
+                    <path d="m 133.57,167.19 0,0 0.03,0.36 -0.3,0.17 -12.17,-7.02 0,-0.35 0,-0.35 z"
+                      shape-rendering="geometricPrecision"
+                      style="fill:#e2e8f0;fill-rule:evenodd;stroke:#e2e8f0;stroke-width:0;stroke-linejoin:miter" />
+                    <path style="stroke:#e2e8f0;stroke-width:0.6" d="M 131.00999,169.05 121.13,163.34" />
+                  </g>
+                  <g id="g36">
+                    <path d="m 121.13,160 0,0 0,0.35 0,0.35 -12.18,7.02 -0.3,-0.17 0,-0.35 z"
+                      shape-rendering="geometricPrecision"
+                      style="fill:#e2e8f0;fill-rule:evenodd;stroke:#e2e8f0;stroke-width:0;stroke-linejoin:miter" />
+                  </g>
+                  <!-- H3CO label -->
+                  <g id="g40">
+                    <g style="text-anchor:end" id="text42">
+                      <path
+                        d="m 74.529411,164.05 0,-7.1582 0.947266,0 0,2.93945 3.720703,0 0,-2.93945 0.947266,0 0,7.1582 -0.947266,0 0,-3.37402 -3.720703,0 0,3.37402 z"
+                        style="font-size:10px;fill:#94a3b8;font-family:Arial" />
+                      <path
+                        d="m 81.270134,164.89277 0.65918,-0.0879 c 0.07568,0.37353 0.204466,0.6427 0.386352,0.80749 0.181883,0.1648 0.403441,0.24719 0.664673,0.24719 0.310056,0 0.571897,-0.10742 0.785523,-0.32226 0.21362,-0.21484 0.320431,-0.48096 0.320434,-0.79834 -3e-6,-0.30273 -0.09888,-0.55237 -0.296631,-0.7489 -0.197756,-0.19653 -0.449221,-0.2948 -0.754394,-0.2948 -0.124514,0 -0.279543,0.0244 -0.465088,0.0732 l 0.07324,-0.57861 c 0.04394,0.005 0.07934,0.007 0.106201,0.007 0.28076,0 0.533445,-0.0732 0.758057,-0.21973 0.224606,-0.14648 0.336911,-0.37231 0.336914,-0.67749 -3e-6,-0.24169 -0.08179,-0.44189 -0.245361,-0.60058 -0.163577,-0.15869 -0.374759,-0.23803 -0.633545,-0.23804 -0.25635,10e-6 -0.469973,0.0806 -0.64087,0.2417 -0.170899,0.16114 -0.280762,0.40284 -0.329589,0.7251 l -0.65918,-0.11719 c 0.08057,-0.44189 0.263671,-0.7843 0.549316,-1.02722 0.285644,-0.24292 0.640868,-0.36438 1.065674,-0.36438 0.292967,0 0.562742,0.0629 0.809326,0.1886 0.246579,0.12573 0.435178,0.29724 0.565796,0.51452 0.130612,0.21729 0.19592,0.44801 0.195923,0.69214 -3e-6,0.23194 -0.06226,0.44312 -0.186767,0.63355 -0.124515,0.19043 -0.308841,0.3418 -0.552979,0.4541 0.31738,0.0732 0.563961,0.22522 0.739746,0.45593 0.175778,0.23072 0.263668,0.51941 0.263672,0.86609 -4e-6,0.46875 -0.170902,0.86609 -0.512695,1.19202 -0.3418,0.32592 -0.773929,0.48889 -1.296387,0.48889 -0.471193,0 -0.862428,-0.14038 -1.173706,-0.42114 -0.31128,-0.28077 -0.488892,-0.64453 -0.532837,-1.09131 z"
+                        style="font-size:7.5px;fill:#94a3b8;font-family:Arial" />
+                      <path
+                        d="m 91.008904,161.54024 0.947265,0.23926 c -0.198574,0.77799 -0.555833,1.37125 -1.071777,1.77978 -0.515956,0.40853 -1.146652,0.61279 -1.89209,0.61279 -0.771488,0 -1.398928,-0.15706 -1.882324,-0.47119 -0.4834,-0.31412 -0.851238,-0.76904 -1.103516,-1.36474 -0.252279,-0.5957 -0.378418,-1.23535 -0.378418,-1.91895 0,-0.74544 0.142415,-1.39566 0.427246,-1.95068 0.28483,-0.55501 0.690103,-0.97656 1.215821,-1.26465 0.525713,-0.28808 1.104326,-0.43212 1.735839,-0.43213 0.716142,1e-5 1.318355,0.1823 1.806641,0.54687 0.488275,0.36459 0.828444,0.87729 1.020508,1.53809 l -0.932617,0.21973 c -0.166022,-0.52083 -0.406907,-0.90006 -0.722657,-1.1377 -0.31576,-0.23762 -0.712895,-0.35644 -1.191406,-0.35644 -0.550133,0 -1.009931,0.13184 -1.379394,0.3955 -0.369469,0.26368 -0.629071,0.61769 -0.778809,1.06202 -0.149741,0.44434 -0.224611,0.90251 -0.224609,1.37451 -2e-6,0.60872 0.0887,1.14014 0.266113,1.59424 0.177407,0.4541 0.453285,0.79345 0.827637,1.01806 0.374346,0.22461 0.779619,0.33692 1.21582,0.33692 0.530595,0 0.979813,-0.153 1.347656,-0.45899 0.367833,-0.30599 0.616856,-0.76009 0.747071,-1.3623 z"
+                        style="font-size:10px;fill:#94a3b8;font-family:Arial" />
+                      <path
+                        d="m 92.839958,160.56367 c 0,-1.18814 0.31901,-2.11832 0.957031,-2.79052 0.638019,-0.6722 1.461586,-1.0083 2.470704,-1.0083 0.660802,0 1.256505,0.15788 1.787109,0.47363 0.530593,0.31576 0.935052,0.75603 1.213379,1.3208 0.278313,0.56478 0.417473,1.20525 0.41748,1.92139 -7e-6,0.72591 -0.146491,1.37532 -0.439453,1.94824 -0.292975,0.57292 -0.708014,1.00667 -1.245117,1.30127 -0.537114,0.2946 -1.116541,0.44189 -1.738281,0.44189 -0.673832,0 -1.276045,-0.16276 -1.806641,-0.48828 -0.5306,-0.32552 -0.932618,-0.76985 -1.206055,-1.33301 -0.273438,-0.56314 -0.410156,-1.15885 -0.410156,-1.78711 z m 0.976563,0.0146 c -2e-6,0.86264 0.231932,1.54216 0.6958,2.03858 0.463865,0.49642 1.045733,0.74463 1.745606,0.74463 0.712886,0 1.299637,-0.25065 1.760254,-0.75196 0.460606,-0.5013 0.690911,-1.21256 0.690918,-2.13379 -7e-6,-0.58267 -0.09848,-1.0913 -0.29541,-1.52587 -0.196946,-0.43457 -0.485032,-0.77148 -0.864258,-1.01075 -0.379237,-0.23925 -0.804855,-0.35888 -1.276856,-0.35888 -0.670576,0 -1.247561,0.23031 -1.730957,0.69091 -0.4834,0.46062 -0.725099,1.22966 -0.725097,2.30713 z"
+                        style="font-size:10px;fill:#94a3b8;font-family:Arial" />
+                    </g>
+                  </g>
+                  <g id="g50">
+                    <path d="m 108.65,167.2 0,0 0,0.35 -0.3,0.17 -7.61,-4.39 0.15,-0.26 0.15,-0.26 z"
+                      shape-rendering="geometricPrecision"
+                      style="fill:#e2e8f0;fill-rule:evenodd;stroke:#e2e8f0;stroke-width:0;stroke-linejoin:miter" />
+                  </g>
+                  <g id="g54">
+                    <g style="text-anchor:end" id="text56">
+                      <path
+                        d="m 74.529411,192.8 0,-7.1582 0.947266,0 0,2.93945 3.720703,0 0,-2.93945 0.947266,0 0,7.1582 -0.947266,0 0,-3.37402 -3.720703,0 0,3.37402 z"
+                        style="font-size:10px;fill:#94a3b8;font-family:Arial" />
+                      <path
+                        d="m 81.270134,193.64277 0.65918,-0.0879 c 0.07568,0.37353 0.204466,0.6427 0.386352,0.80749 0.181883,0.1648 0.403441,0.24719 0.664673,0.24719 0.310056,0 0.571897,-0.10742 0.785523,-0.32226 0.21362,-0.21484 0.320431,-0.48096 0.320434,-0.79834 -3e-6,-0.30273 -0.09888,-0.55237 -0.296631,-0.7489 -0.197756,-0.19653 -0.449221,-0.2948 -0.754394,-0.2948 -0.124514,0 -0.279543,0.0244 -0.465088,0.0732 l 0.07324,-0.57861 c 0.04394,0.005 0.07934,0.007 0.106201,0.007 0.28076,0 0.533445,-0.0732 0.758057,-0.21973 0.224606,-0.14648 0.336911,-0.37231 0.336914,-0.67749 -3e-6,-0.24169 -0.08179,-0.44189 -0.245361,-0.60058 -0.163577,-0.15869 -0.374759,-0.23803 -0.633545,-0.23804 -0.25635,10e-6 -0.469973,0.0806 -0.64087,0.2417 -0.170899,0.16114 -0.280762,0.40284 -0.329589,0.7251 l -0.65918,-0.11719 c 0.08057,-0.44189 0.263671,-0.7843 0.549316,-1.02722 0.285644,-0.24292 0.640868,-0.36438 1.065674,-0.36438 0.292967,0 0.562742,0.0629 0.809326,0.1886 0.246579,0.12573 0.435178,0.29724 0.565796,0.51452 0.130612,0.21729 0.19592,0.44801 0.195923,0.69214 -3e-6,0.23194 -0.06226,0.44312 -0.186767,0.63355 -0.124515,0.19043 -0.308841,0.3418 -0.552979,0.4541 0.31738,0.0732 0.563961,0.22522 0.739746,0.45593 0.175778,0.23072 0.263668,0.51941 0.263672,0.86609 -4e-6,0.46875 -0.170902,0.86609 -0.512695,1.19202 -0.3418,0.32592 -0.773929,0.48889 -1.296387,0.48889 -0.471193,0 -0.862428,-0.14038 -1.173706,-0.42114 -0.31128,-0.28077 -0.488892,-0.64453 -0.532837,-1.09131 z"
+                        style="font-size:7.5px;fill:#94a3b8;font-family:Arial" />
+                      <path
+                        d="m 91.008904,190.29024 0.947265,0.23926 c -0.198574,0.77799 -0.555833,1.37125 -1.071777,1.77978 -0.515956,0.40853 -1.146652,0.61279 -1.89209,0.61279 -0.771488,0 -1.398928,-0.15706 -1.882324,-0.47119 -0.4834,-0.31412 -0.851238,-0.76904 -1.103516,-1.36474 -0.252279,-0.5957 -0.378418,-1.23535 -0.378418,-1.91895 0,-0.74544 0.142415,-1.39566 0.427246,-1.95068 0.28483,-0.55501 0.690103,-0.97656 1.215821,-1.26465 0.525713,-0.28808 1.104326,-0.43212 1.735839,-0.43213 0.716142,1e-5 1.318355,0.1823 1.806641,0.54687 0.488275,0.36459 0.828444,0.87729 1.020508,1.53809 l -0.932617,0.21973 c -0.166022,-0.52083 -0.406907,-0.90006 -0.722657,-1.1377 -0.31576,-0.23762 -0.712895,-0.35644 -1.191406,-0.35644 -0.550133,0 -1.009931,0.13184 -1.379394,0.3955 -0.369469,0.26368 -0.629071,0.61769 -0.778809,1.06202 -0.149741,0.44434 -0.224611,0.90251 -0.224609,1.37451 -2e-6,0.60872 0.0887,1.14014 0.266113,1.59424 0.177407,0.4541 0.453285,0.79345 0.827637,1.01806 0.374346,0.22461 0.779619,0.33692 1.21582,0.33692 0.530595,0 0.979813,-0.153 1.347656,-0.45899 0.367833,-0.30599 0.616856,-0.76009 0.747071,-1.3623 z"
+                        style="font-size:10px;fill:#94a3b8;font-family:Arial" />
+                      <path
+                        d="m 92.839958,189.31367 c 0,-1.18814 0.31901,-2.11832 0.957031,-2.79052 0.638019,-0.6722 1.461586,-1.0083 2.470704,-1.0083 0.660802,0 1.256505,0.15788 1.787109,0.47363 0.530593,0.31576 0.935052,0.75603 1.213379,1.3208 0.278313,0.56478 0.417473,1.20525 0.41748,1.92139 -7e-6,0.72591 -0.146491,1.37532 -0.439453,1.94824 -0.292975,0.57292 -0.708014,1.00667 -1.245117,1.30127 -0.537114,0.2946 -1.116541,0.44189 -1.738281,0.44189 -0.673832,0 -1.276045,-0.16276 -1.806641,-0.48828 -0.5306,-0.32552 -0.932618,-0.76985 -1.206055,-1.33301 -0.273438,-0.56314 -0.410156,-1.15885 -0.410156,-1.78711 z m 0.976563,0.0146 c -2e-6,0.86264 0.231932,1.54216 0.6958,2.03858 0.463865,0.49642 1.045733,0.74463 1.745606,0.74463 0.712886,0 1.299637,-0.25065 1.760254,-0.75196 0.460606,-0.5013 0.690911,-1.21256 0.690918,-2.13379 -7e-6,-0.58267 -0.09848,-1.0913 -0.29541,-1.52587 -0.196946,-0.43457 -0.485032,-0.77148 -0.864258,-1.01075 -0.379237,-0.23925 -0.804855,-0.35888 -1.276856,-0.35888 -0.670576,0 -1.247561,0.23031 -1.730957,0.69091 -0.4834,0.46062 -0.725099,1.22966 -0.725097,2.30713 z"
+                        style="font-size:10px;fill:#94a3b8;font-family:Arial" />
+                    </g>
+                  </g>
+                  <g id="g64">
+                    <path d="m 108.35,181.78 0,0 0.3,0.17 0,0.35 -7.71,4.45 -0.15,-0.26 -0.15,-0.26 z"
+                      shape-rendering="geometricPrecision"
+                      style="fill:#e2e8f0;fill-rule:evenodd;stroke:#e2e8f0;stroke-width:0;stroke-linejoin:miter" />
+                  </g>
+                  <g id="g68">
+                    <g style="text-anchor:end" id="text70">
+                      <path
+                        d="m 99.429413,207.17 0,-7.1582 0.947267,0 0,2.93945 3.7207,0 0,-2.93945 0.94727,0 0,7.1582 -0.94727,0 0,-3.37403 -3.7207,0 0,3.37403 z"
+                        style="font-size:10px;fill:#94a3b8;font-family:Arial" />
+                      <path
+                        d="m 106.17014,208.01276 0.65918,-0.0879 c 0.0757,0.37354 0.20446,0.6427 0.38635,0.8075 0.18188,0.16479 0.40344,0.24719 0.66467,0.24719 0.31006,0 0.5719,-0.10742 0.78552,-0.32227 0.21362,-0.21484 0.32043,-0.48095 0.32044,-0.79834 -1e-5,-0.30273 -0.0989,-0.55236 -0.29663,-0.7489 -0.19776,-0.19653 -0.44922,-0.2948 -0.7544,-0.2948 -0.12451,0 -0.27954,0.0244 -0.46509,0.0732 l 0.0733,-0.57861 c 0.0439,0.005 0.0793,0.007 0.1062,0.007 0.28076,0 0.53344,-0.0732 0.75805,-0.21973 0.22461,-0.14648 0.33692,-0.37231 0.33692,-0.67749 0,-0.2417 -0.0818,-0.44189 -0.24536,-0.60059 -0.16358,-0.15868 -0.37476,-0.23803 -0.63355,-0.23803 -0.25635,0 -0.46997,0.0806 -0.64087,0.24169 -0.1709,0.16114 -0.28076,0.40284 -0.32959,0.7251 l -0.65918,-0.11719 c 0.0806,-0.44189 0.26367,-0.78429 0.54932,-1.02722 0.28564,-0.24291 0.64087,-0.36437 1.06567,-0.36438 0.29297,10e-6 0.56275,0.0629 0.80933,0.1886 0.24658,0.12574 0.43518,0.29725 0.5658,0.51453 0.13061,0.21729 0.19592,0.448 0.19592,0.69214 0,0.23193 -0.0623,0.44312 -0.18677,0.63354 -0.12451,0.19043 -0.30884,0.3418 -0.55298,0.4541 0.31738,0.0733 0.56396,0.22523 0.73975,0.45594 0.17578,0.23071 0.26367,0.51941 0.26367,0.86608 0,0.46876 -0.1709,0.86609 -0.51269,1.19202 -0.3418,0.32593 -0.77393,0.48889 -1.29639,0.48889 -0.47119,0 -0.86243,-0.14038 -1.17371,-0.42114 -0.31128,-0.28076 -0.48889,-0.64453 -0.53283,-1.09131 z"
+                        style="font-size:7.5px;fill:#94a3b8;font-family:Arial" />
+                      <path
+                        d="m 115.90891,204.66023 0.94726,0.23926 c -0.19857,0.778 -0.55583,1.37126 -1.07178,1.77979 -0.51595,0.40852 -1.14665,0.61279 -1.89209,0.61279 -0.77148,0 -1.39892,-0.15707 -1.88232,-0.47119 -0.4834,-0.31413 -0.85124,-0.76904 -1.10352,-1.36475 -0.25228,-0.5957 -0.37841,-1.23535 -0.37841,-1.91894 0,-0.74544 0.14241,-1.39567 0.42724,-1.95069 0.28483,-0.555 0.6901,-0.97655 1.21582,-1.26465 0.52572,-0.28808 1.10433,-0.43212 1.73584,-0.43213 0.71614,10e-6 1.31836,0.1823 1.80664,0.54688 0.48828,0.36459 0.82845,0.87728 1.02051,1.53809 l -0.93262,0.21972 c -0.16602,-0.52083 -0.4069,-0.90006 -0.72265,-1.13769 -0.31576,-0.23763 -0.7129,-0.35644 -1.19141,-0.35645 -0.55013,1e-5 -1.00993,0.13184 -1.37939,0.39551 -0.36947,0.26368 -0.62907,0.61768 -0.77881,1.06201 -0.14974,0.44434 -0.22461,0.90251 -0.22461,1.37451 0,0.60873 0.0887,1.14014 0.26611,1.59424 0.17741,0.4541 0.45329,0.79346 0.82764,1.01807 0.37434,0.22461 0.77962,0.33691 1.21582,0.33691 0.53059,0 0.97981,-0.15299 1.34765,-0.45898 0.36784,-0.30599 0.61686,-0.76009 0.74708,-1.36231 z"
+                        style="font-size:10px;fill:#94a3b8;font-family:Arial" />
+                      <path
+                        d="m 117.73996,203.68367 c 0,-1.18815 0.31901,-2.11832 0.95703,-2.79053 0.63802,-0.67219 1.46159,-1.00829 2.4707,-1.0083 0.66081,1e-5 1.25651,0.15789 1.78711,0.47363 0.5306,0.31577 0.93506,0.75603 1.21338,1.32081 0.27832,0.56478 0.41748,1.20524 0.41748,1.92138 0,0.72592 -0.14649,1.37533 -0.43945,1.94824 -0.29298,0.57292 -0.70801,1.00668 -1.24512,1.30127 -0.53711,0.2946 -1.11654,0.4419 -1.73828,0.4419 -0.67383,0 -1.27604,-0.16276 -1.80664,-0.48828 -0.5306,-0.32552 -0.93262,-0.76986 -1.20605,-1.33301 -0.27344,-0.56315 -0.41016,-1.15885 -0.41016,-1.78711 z m 0.97656,0.0146 c 0,0.86263 0.23193,1.54216 0.6958,2.03857 0.46387,0.49642 1.04574,0.74463 1.74561,0.74463 0.71288,0 1.29964,-0.25065 1.76025,-0.75195 0.46061,-0.5013 0.69091,-1.21256 0.69092,-2.13379 -1e-5,-0.58268 -0.0985,-1.0913 -0.29541,-1.52588 -0.19695,-0.43456 -0.48503,-0.77148 -0.86426,-1.01074 -0.37923,-0.23925 -0.80485,-0.35888 -1.27685,-0.35889 -0.67058,1e-5 -1.24756,0.23031 -1.73096,0.69092 -0.4834,0.46062 -0.7251,1.22966 -0.7251,2.30713 z"
+                        style="font-size:10px;fill:#94a3b8;font-family:Arial" />
+                    </g>
+                  </g>
+                  <g id="g78">
+                    <path d="m 120.83,189.32 0,0 0.3,-0.17 0.3,0.17 0,8.98 -0.3,0 -0.3,0 z"
+                      shape-rendering="geometricPrecision"
+                      style="fill:#e2e8f0;fill-rule:evenodd;stroke:#e2e8f0;stroke-width:0;stroke-linejoin:miter" />
+                  </g>
+                  <g id="g82">
+                    <path d="m 133.57,182.31 0,0 0.03,-0.36 0.3,-0.14 11.02,8.8 -0.07,0.32 -0.37,0.09 z"
+                      shape-rendering="geometricPrecision"
+                      style="fill:#e2e8f0;fill-rule:evenodd;stroke:#e2e8f0;stroke-width:0;stroke-linejoin:miter" />
+                  </g>
+                  <g id="g86">
+                    <path d="m 145.06,191.19 0,0 -0.21,-0.26 0.07,-0.32 13.76,-3.15 0.21,0.26 -0.07,0.32 z"
+                      shape-rendering="geometricPrecision"
+                      style="fill:#e2e8f0;fill-rule:evenodd;stroke:#e2e8f0;stroke-width:0;stroke-linejoin:miter" />
+                  </g>
+                  <g id="g90">
+                    <path d="m 159.26,187.63 0,0 -0.37,0.09 -0.21,-0.26 6.13,-12.71 0.33,0 0.33,0 z"
+                      shape-rendering="geometricPrecision"
+                      style="fill:#e2e8f0;fill-rule:evenodd;stroke:#e2e8f0;stroke-width:0;stroke-linejoin:miter" />
+                  </g>
+                  <g id="g94">
+                    <path d="m 165.47,174.75 0,0 -0.33,0 -0.33,0 -6.13,-12.71 0.21,-0.26 0.21,-0.26 z"
+                      shape-rendering="geometricPrecision"
+                      style="fill:#e2e8f0;fill-rule:evenodd;stroke:#e2e8f0;stroke-width:0;stroke-linejoin:miter" />
+                  </g>
+                  <g id="g98">
+                    <path d="m 159.1,161.52 0,0 -0.21,0.26 -0.21,0.26 -13.76,-3.15 -0.07,-0.32 -0.07,-0.32 z"
+                      shape-rendering="geometricPrecision"
+                      style="fill:#e2e8f0;fill-rule:evenodd;stroke:#e2e8f0;stroke-width:0;stroke-linejoin:miter" />
+                  </g>
+                  <g id="g102">
+                    <path d="m 144.78,158.25 0,0 0.07,0.32 0.07,0.32 -11.02,8.8 -0.3,-0.14 -0.03,-0.36 z"
+                      shape-rendering="geometricPrecision"
+                      style="fill:#e2e8f0;fill-rule:evenodd;stroke:#e2e8f0;stroke-width:0;stroke-linejoin:miter" />
+                  </g>
+                  <g id="g106">
+                    <path d="m 144.48,191.02 0,0 0.37,-0.09 0.21,0.26 -6.12,12.71 -0.33,0 -0.33,0 z"
+                      shape-rendering="geometricPrecision"
+                      style="fill:#e2e8f0;fill-rule:evenodd;stroke:#e2e8f0;stroke-width:0;stroke-linejoin:miter" />
+                    <path style="stroke:#e2e8f0;stroke-width:0.6" d="m 146.64,193.17999 -5.16,10.72" />
+                  </g>
+                  <g id="g112">
+                    <path d="m 138.28,203.9 0,0 0.33,0 0.33,0 6.12,12.72 -0.21,0.26 -0.21,0.26 z"
+                      shape-rendering="geometricPrecision"
+                      style="fill:#e2e8f0;fill-rule:evenodd;stroke:#e2e8f0;stroke-width:0;stroke-linejoin:miter" />
+                  </g>
+                  <g id="g116">
+                    <path d="m 144.64,217.14 0,0 0.21,-0.26 0.21,-0.26 13.76,3.14 0.07,0.32 -0.25,0.25 z"
+                      shape-rendering="geometricPrecision"
+                      style="fill:#e2e8f0;fill-rule:evenodd;stroke:#e2e8f0;stroke-width:0;stroke-linejoin:miter" />
+                    <path style="stroke:#e2e8f0;stroke-width:0.6" d="m 146.64,214.63 11.61,2.65" />
+                  </g>
+                  <g id="g122">
+                    <path d="m 159.22,220.2 0,0 -0.33,-0.12 -0.07,-0.32 11.03,-8.8 0.3,0.14 0.3,0.14 z"
+                      shape-rendering="geometricPrecision"
+                      style="fill:#e2e8f0;fill-rule:evenodd;stroke:#e2e8f0;stroke-width:0;stroke-linejoin:miter" />
+                  </g>
+                  <g id="g126">
+                    <path d="m 170.45,211.24 0,0 -0.3,-0.14 -0.3,-0.14 0,-14.12 0.3,-0.14 0.3,-0.14 z"
+                      shape-rendering="geometricPrecision"
+                      style="fill:#e2e8f0;fill-rule:evenodd;stroke:#e2e8f0;stroke-width:0;stroke-linejoin:miter" />
+                  </g>
+                  <g id="g130">
+                    <path d="m 170.45,196.56 0,0 -0.3,0.14 -0.3,0.14 -11.03,-8.8 0.07,-0.32 0.37,-0.09 z"
+                      shape-rendering="geometricPrecision"
+                      style="fill:#e2e8f0;fill-rule:evenodd;stroke:#e2e8f0;stroke-width:0;stroke-linejoin:miter" />
+                    <path style="stroke:#e2e8f0;stroke-width:0.6" d="m 167.56,197.95 -9.31,-7.42" />
+                  </g>
+                  <!-- OC H3 labels -->
+                  <g id="g136">
+                    <g style="text-anchor:start" id="text138">
+                      <path
+                        d="m 158.66339,234.26367 c 0,-1.18814 0.31901,-2.11832 0.95703,-2.79053 0.63802,-0.67219 1.46159,-1.00829 2.47071,-1.0083 0.6608,1e-5 1.2565,0.15789 1.7871,0.47364 0.5306,0.31576 0.93506,0.75602 1.21338,1.3208 0.27832,0.56478 0.41748,1.20524 0.41748,1.92138 0,0.72592 -0.14649,1.37533 -0.43945,1.94825 -0.29297,0.57291 -0.70801,1.00667 -1.24512,1.30127 -0.53711,0.29459 -1.11654,0.44189 -1.73828,0.44189 -0.67383,0 -1.27604,-0.16276 -1.80664,-0.48828 -0.5306,-0.32552 -0.93262,-0.76986 -1.20605,-1.33301 -0.27344,-0.56315 -0.41016,-1.15885 -0.41016,-1.78711 z m 0.97656,0.0147 c 0,0.86263 0.23194,1.54216 0.6958,2.03857 0.46387,0.49642 1.04574,0.74463 1.74561,0.74463 0.71289,0 1.29964,-0.25065 1.76025,-0.75195 0.46061,-0.5013 0.69092,-1.21256 0.69092,-2.13379 0,-0.58268 -0.0985,-1.0913 -0.29541,-1.52588 -0.19694,-0.43456 -0.48503,-0.77148 -0.86426,-1.01074 -0.37923,-0.23925 -0.80485,-0.35888 -1.27685,-0.35889 -0.67058,1e-5 -1.24756,0.23032 -1.73096,0.69092 -0.4834,0.46062 -0.7251,1.22966 -0.7251,2.30713 z"
+                        style="font-size:10px;fill:#94a3b8;font-family:Arial" />
+                      <path
+                        d="m 171.83234,235.24023 0.94726,0.23926 c -0.19857,0.778 -0.55583,1.37126 -1.07178,1.77979 -0.51595,0.40853 -1.14665,0.61279 -1.89209,0.61279 -0.77148,0 -1.39892,-0.15706 -1.88232,-0.47119 -0.4834,-0.31413 -0.85124,-0.76904 -1.10351,-1.36475 -0.25228,-0.5957 -0.37842,-1.23535 -0.37842,-1.91894 0,-0.74544 0.14241,-1.39567 0.42724,-1.95069 0.28483,-0.555 0.69011,-0.97655 1.21582,-1.26464 0.52572,-0.28808 1.10433,-0.43213 1.73584,-0.43213 0.71614,0 1.31836,0.1823 1.80664,0.54687 0.48828,0.36459 0.82845,0.87729 1.02051,1.53809 l -0.93262,0.21972 c -0.16602,-0.52082 -0.4069,-0.90006 -0.72265,-1.13769 -0.31576,-0.23763 -0.7129,-0.35644 -1.19141,-0.35645 -0.55013,1e-5 -1.00993,0.13185 -1.37939,0.39551 -0.36947,0.26368 -0.62907,0.61768 -0.77881,1.06201 -0.14974,0.44434 -0.22461,0.90251 -0.22461,1.37451 0,0.60873 0.0887,1.14014 0.26611,1.59424 0.17741,0.45411 0.45329,0.79346 0.82764,1.01807 0.37435,0.22461 0.77962,0.33691 1.21582,0.33691 0.53059,0 0.97981,-0.15299 1.34766,-0.45898 0.36783,-0.30599 0.61685,-0.76009 0.74707,-1.36231 z"
+                        style="font-size:10px;fill:#94a3b8;font-family:Arial" />
+                      <path
+                        d="m 173.98077,237.75 0,-7.1582 0.94727,0 0,2.93945 3.7207,0 0,-2.93945 0.94727,0 0,7.1582 -0.94727,0 0,-3.37402 -3.7207,0 0,3.37402 z"
+                        style="font-size:10px;fill:#94a3b8;font-family:Arial" />
+                      <path
+                        d="m 180.7215,238.59276 0.65918,-0.0879 c 0.0757,0.37354 0.20446,0.6427 0.38635,0.8075 0.18188,0.16479 0.40344,0.24719 0.66467,0.24719 0.31006,0 0.5719,-0.10742 0.78552,-0.32227 0.21362,-0.21484 0.32044,-0.48095 0.32044,-0.79833 0,-0.30274 -0.0989,-0.55237 -0.29663,-0.74891 -0.19776,-0.19653 -0.44922,-0.29479 -0.7544,-0.2948 -0.12451,1e-5 -0.27954,0.0244 -0.46508,0.0733 l 0.0732,-0.57862 c 0.0439,0.005 0.0793,0.007 0.1062,0.007 0.28076,0 0.53344,-0.0732 0.75806,-0.21973 0.2246,-0.14648 0.33691,-0.37231 0.33691,-0.67749 0,-0.24169 -0.0818,-0.44189 -0.24536,-0.60059 -0.16358,-0.15868 -0.37476,-0.23803 -0.63355,-0.23803 -0.25635,0 -0.46997,0.0806 -0.64087,0.2417 -0.1709,0.16113 -0.28076,0.40283 -0.32959,0.72509 l -0.65918,-0.11718 c 0.0806,-0.44189 0.26368,-0.7843 0.54932,-1.02723 0.28564,-0.24291 0.64087,-0.36437 1.06567,-0.36438 0.29297,1e-5 0.56275,0.0629 0.80933,0.1886 0.24658,0.12574 0.43518,0.29725 0.5658,0.51453 0.13061,0.21729 0.19592,0.448 0.19592,0.69214 0,0.23194 -0.0623,0.44312 -0.18677,0.63354 -0.12451,0.19044 -0.30884,0.3418 -0.55298,0.45411 0.31738,0.0732 0.56397,0.22522 0.73975,0.45593 0.17578,0.23071 0.26367,0.51941 0.26367,0.86609 0,0.46875 -0.1709,0.86609 -0.51269,1.19201 -0.3418,0.32593 -0.77393,0.48889 -1.29639,0.48889 -0.47119,0 -0.86243,-0.14038 -1.17371,-0.42114 -0.31128,-0.28076 -0.48889,-0.64453 -0.53283,-1.09131 z"
+                        style="font-size:7.5px;fill:#94a3b8;font-family:Arial" />
+                    </g>
+                  </g>
+                  <g id="g144">
+                    <path d="m 158.64,220.33 0,0 0.25,-0.25 0.33,0.12 2.01,8.77 -0.29,0.07 -0.29,0.07 z"
+                      shape-rendering="geometricPrecision"
+                      style="fill:#e2e8f0;fill-rule:evenodd;stroke:#e2e8f0;stroke-width:0;stroke-linejoin:miter" />
+                  </g>
+                  <g id="g148">
+                    <g style="text-anchor:start" id="text150">
+                      <path
+                        d="m 179.6534,217.51367 c 0,-1.18814 0.31901,-2.11832 0.95703,-2.79053 0.63802,-0.67219 1.46158,-1.00829 2.4707,-1.0083 0.6608,1e-5 1.25651,0.15789 1.78711,0.47364 0.53059,0.31576 0.93505,0.75602 1.21338,1.3208 0.27831,0.56478 0.41747,1.20524 0.41748,1.92138 -1e-5,0.72592 -0.14649,1.37533 -0.43945,1.94825 -0.29298,0.57291 -0.70802,1.00667 -1.24512,1.30127 -0.53712,0.29459 -1.11654,0.44189 -1.73828,0.44189 -0.67383,0 -1.27605,-0.16276 -1.80664,-0.48828 -0.5306,-0.32552 -0.93262,-0.76986 -1.20606,-1.33301 -0.27344,-0.56315 -0.41015,-1.15885 -0.41015,-1.78711 z m 0.97656,0.0147 c 0,0.86263 0.23193,1.54216 0.6958,2.03857 0.46386,0.49642 1.04573,0.74463 1.74561,0.74463 0.71288,0 1.29963,-0.25065 1.76025,-0.75195 0.46061,-0.5013 0.69091,-1.21256 0.69092,-2.13379 -1e-5,-0.58268 -0.0985,-1.0913 -0.29541,-1.52588 -0.19695,-0.43456 -0.48503,-0.77148 -0.86426,-1.01074 -0.37924,-0.23925 -0.80486,-0.35888 -1.27686,-0.35889 -0.67057,1e-5 -1.24756,0.23032 -1.73095,0.69092 -0.4834,0.46062 -0.7251,1.22966 -0.7251,2.30713 z"
+                        style="font-size:10px;fill:#94a3b8;font-family:Arial" />
+                    </g>
+                  </g>
+                  <g id="g154">
+                    <path style="stroke:#e2e8f0;stroke-width:0.6" d="m 170.71001,209.94 8.11,3.9" />
+                    <path d="m 169.59,211.93 0,0 -0.52,0.42 8.5,4.09 0.26,-0.54 z" shape-rendering="geometricPrecision"
+                      style="fill:#e2e8f0;fill-rule:evenodd;stroke:#e2e8f0;stroke-width:0;stroke-linejoin:miter" />
+                    <path d="m 170.45,209.48 0,0 0,0.66 8.24,3.97 0.26,-0.54 z" shape-rendering="geometricPrecision"
+                      style="fill:#e2e8f0;fill-rule:evenodd;stroke:#e2e8f0;stroke-width:0;stroke-linejoin:miter" />
+                  </g>
+                  <g id="g162">
+                    <g style="text-anchor:start" id="text164">
+                      <path
+                        d="m 176.66171,178.32001 0,-7.15821 0.97168,0 3.75977,5.62012 0,-5.62012 0.9082,0 0,7.15821 -0.97168,0 -3.75976,-5.625 0,5.625 z"
+                        style="font-size:10px;fill:#94a3b8;font-family:Arial" />
+                      <path
+                        d="m 176.70078,188.50999 0,-7.1582 0.94726,0 0,2.93945 3.7207,0 0,-2.93945 0.94727,0 0,7.1582 -0.94727,0 0,-3.37402 -3.7207,0 0,3.37402 z"
+                        style="font-size:10px;fill:#94a3b8;font-family:Arial" />
+                    </g>
+                  </g>
+                  <g id="Wedged Hash Begin Bond">
+                    <path d="m 165.14,175.05 0,0 0,-0.6 0.6,-0.07 0,0.74 z" shape-rendering="geometricPrecision"
+                      style="fill:#e2e8f0;fill-rule:evenodd;stroke:#e2e8f0;stroke-width:0;stroke-linejoin:miter" />
+                    <path d="m 168.26,175.43 0,0 0,-1.36 0.6,-0.07 0,1.5 z" shape-rendering="geometricPrecision"
+                      style="fill:#e2e8f0;fill-rule:evenodd;stroke:#e2e8f0;stroke-width:0;stroke-linejoin:miter" />
+                    <path d="m 171.38,175.8 0,0 0,-2.1 0.6,-0.07 0,2.24 z" shape-rendering="geometricPrecision"
+                      style="fill:#e2e8f0;fill-rule:evenodd;stroke:#e2e8f0;stroke-width:0;stroke-linejoin:miter" />
+                    <path d="m 174.5,176.18 0,0 0,-2.86 0.6,-0.07 0,3 z" shape-rendering="geometricPrecision"
+                      style="fill:#e2e8f0;fill-rule:evenodd;stroke:#e2e8f0;stroke-width:0;stroke-linejoin:miter" />
+                  </g>
+                  <g id="g179">
+                    <path d="m 183.84,172.59 0,0 -0.15,-0.26 -0.15,-0.26 8.42,-4.87 0,0.35 0,0.35 z"
+                      shape-rendering="geometricPrecision"
+                      style="fill:#e2e8f0;fill-rule:evenodd;stroke:#e2e8f0;stroke-width:0;stroke-linejoin:miter" />
+                  </g>
+                  <g id="g183">
+                    <path d="m 191.96,167.9 0,0 0,-0.35 0,-0.35 12.58,7.26 -0.15,0.26 -0.15,0.26 z"
+                      shape-rendering="geometricPrecision"
+                      style="fill:#e2e8f0;fill-rule:evenodd;stroke:#e2e8f0;stroke-width:0;stroke-linejoin:miter" />
+                  </g>
+                  <g id="g187">
+                    <g style="text-anchor:start" id="text189">
+                      <path
+                        d="m 188.5434,153.39368 c 0,-1.18815 0.31901,-2.11832 0.95703,-2.79053 0.63802,-0.67219 1.46158,-1.00829 2.4707,-1.0083 0.6608,1e-5 1.25651,0.15788 1.78711,0.47363 0.53059,0.31576 0.93505,0.75603 1.21338,1.3208 0.27831,0.56479 0.41747,1.20525 0.41748,1.92139 -1e-5,0.72591 -0.14649,1.37533 -0.43945,1.94824 -0.29298,0.57292 -0.70802,1.00667 -1.24512,1.30127 -0.53712,0.2946 -1.11654,0.4419 -1.73828,0.4419 -0.67383,0 -1.27605,-0.16277 -1.80664,-0.48829 -0.5306,-0.32552 -0.93262,-0.76985 -1.20606,-1.333 -0.27344,-0.56315 -0.41015,-1.15886 -0.41015,-1.78711 z m 0.97656,0.0147 c 0,0.86263 0.23193,1.54215 0.6958,2.03857 0.46386,0.49642 1.04573,0.74463 1.7456,0.74463 0.71289,0 1.29964,-0.25065 1.76026,-0.75195 0.4606,-0.5013 0.69091,-1.21257 0.69092,-2.13379 -1e-5,-0.58268 -0.0985,-1.09131 -0.29541,-1.52588 -0.19695,-0.43457 -0.48504,-0.77148 -0.86426,-1.01074 -0.37924,-0.23926 -0.80486,-0.35889 -1.27686,-0.35889 -0.67057,0 -1.24756,0.23031 -1.73095,0.69092 -0.4834,0.46061 -0.7251,1.22966 -0.7251,2.30713 z"
+                        style="font-size:10px;fill:#94a3b8;font-family:Arial" />
+                    </g>
+                  </g>
+                  <g id="g193">
+                    <path style="stroke:#e2e8f0;stroke-width:0.6" d="m 190.67,167.55 0,-8.85" />
+                    <path d="m 192.95,167.78 0,0 0.6,0.34 0,-9.42 -0.6,0 z" shape-rendering="geometricPrecision"
+                      style="fill:#e2e8f0;fill-rule:evenodd;stroke:#e2e8f0;stroke-width:0;stroke-linejoin:miter" />
+                    <path d="m 190.37,168.12 0,0 0.6,-0.34 0,-9.08 -0.6,0 z" shape-rendering="geometricPrecision"
+                      style="fill:#e2e8f0;fill-rule:evenodd;stroke:#e2e8f0;stroke-width:0;stroke-linejoin:miter" />
+                  </g>
+                </g>
+              </svg>
+            </div>
+          </div>
+
+
+          <div class="ring-diagram">
+            <div class="ring ring-a" data-label="Ring A">
+              <span>A</span>
+              <div class="ring-info">Trimethoxybenzene<br />Aromatic Ring</div>
+            </div>
+            <div class="ring-connector"></div>
+            <div class="ring ring-b" data-label="Ring B">
+              <span>B</span>
+              <div class="ring-info">Tropolone Ring<br />7-membered</div>
+            </div>
+            <div class="ring-connector"></div>
+            <div class="ring ring-c" data-label="Ring C">
+              <span>C</span>
+              <div class="ring-info">Acetamido Methoxy<br />Ring</div>
+            </div>
+          </div>
+          <p class="ring-caption">Tricyclic tropolone ring system of Colchicine</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PLANT ===== -->
+  <section id="plant" class="section plant-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Botanical Source</span>
+        <h2 class="section-title">The Plant: <em>Colchicum autumnale</em></h2>
+        <p class="section-subtitle">The Autumn Crocus — a deceptively beautiful yet highly toxic plant from the
+          Colchicaceae family</p>
+      </div>
+      <div class="plant-layout">
+        <div class="plant-image-wrapper reveal">
+          <div class="plant-img-card glass-card">
+            <div class="plant-img-placeholder">
+              <!-- Full botanical plant illustration (enhanced) -->
+              <div class="plant-illustration">
+
+                <!-- Atmospheric glow halo behind flower -->
+                <div class="flower-glow"></div>
+
+                <!-- Flower head -->
+                <div class="flower-art">
+                  <div class="flower-petal p1">
+                    <div class="petal-shine"></div>
+                  </div>
+                  <div class="flower-petal p2">
+                    <div class="petal-shine"></div>
+                  </div>
+                  <div class="flower-petal p3">
+                    <div class="petal-shine"></div>
+                  </div>
+                  <div class="flower-petal p4">
+                    <div class="petal-shine"></div>
+                  </div>
+                  <div class="flower-petal p5">
+                    <div class="petal-shine"></div>
+                  </div>
+                  <div class="flower-petal p6">
+                    <div class="petal-shine"></div>
+                  </div>
+                  <!-- Stamens -->
+                  <div class="stamen s1"></div>
+                  <div class="stamen s2"></div>
+                  <div class="stamen s3"></div>
+                  <div class="stamen s4"></div>
+                  <div class="stamen s5"></div>
+                  <div class="stamen s6"></div>
+                  <!-- Pistil center -->
+                  <div class="flower-center">
+                    <div class="pistil-inner"></div>
+                  </div>
+                </div>
+
+                <!-- Stem with lateral leaf -->
+                <div class="stem-wrap">
+                  <div class="flower-stem"></div>
+                  <div class="stem-leaf leaf-left"></div>
+                  <div class="stem-leaf leaf-right"></div>
+                </div>
+
+                <!-- Soil line -->
+                <div class="soil-line">
+                  <div class="soil-particles">
+                    <span></span><span></span><span></span>
+                    <span></span><span></span><span></span>
+                  </div>
+                </div>
+
+                <!-- Underground zone -->
+                <div class="underground-zone">
+                  <div class="corm-art">
+                    <div class="corm-body">
+                      <div class="corm-ring r1"></div>
+                      <div class="corm-ring r2"></div>
+                      <div class="corm-sheen"></div>
+                    </div>
+                    <div class="corm-roots">
+                      <div class="corm-root root-1"></div>
+                      <div class="corm-root root-2"></div>
+                      <div class="corm-root root-3"></div>
+                      <div class="corm-root root-4"></div>
+                      <div class="corm-root root-5"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="corm-label">Corm (Underground Storage Organ)</div>
+              </div>
+            </div>
+            <div class="plant-taxonomy">
+              <table class="taxonomy-table">
+                <tr>
+                  <th>Kingdom</th>
+                  <td>Plantae</td>
+                </tr>
+                <tr>
+                  <th>Order</th>
+                  <td>Liliales</td>
+                </tr>
+                <tr>
+                  <th>Family</th>
+                  <td>Colchicaceae</td>
+                </tr>
+                <tr>
+                  <th>Genus</th>
+                  <td><em>Colchicum</em></td>
+                </tr>
+                <tr>
+                  <th>Species</th>
+                  <td><em>C. autumnale</em></td>
+                </tr>
+                <tr>
+                  <th>Common Name</th>
+                  <td>Autumn Crocus, Meadow Saffron</td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="plant-info reveal">
+          <div class="info-block">
+            <h3>Description &amp; Habitat</h3>
+            <p><em>Colchicum autumnale</em>, commonly known as autumn crocus or meadow saffron, is a perennial flowering
+              plant native to <strong>Europe and North Africa</strong>. It grows in meadows, woodland edges, and damp
+              grasslands at altitudes up to 2,000 meters.</p>
+            <p>The plant blooms in autumn, producing striking lilac-pink flowers that emerge <em>without leaves</em> — a
+              phenomenon called <strong>hysteranthy</strong>. Leaves appear in spring, followed by a seed capsule. The
+              underground corm (bulb-like organ) is the primary source for colchicine extraction.</p>
+          </div>
+          <div class="info-block">
+            <h3>Colchicine Distribution in Plant Parts</h3>
+            <div class="distribution-bars">
+              <div class="dist-item">
+                <span class="dist-label">Seeds</span>
+                <div class="dist-bar-wrap">
+                  <div class="dist-bar" style="--w: 90%"></div>
+                </div>
+                <span class="dist-pct">~0.8%</span>
+              </div>
+              <div class="dist-item">
+                <span class="dist-label">Corms</span>
+                <div class="dist-bar-wrap">
+                  <div class="dist-bar" style="--w: 75%"></div>
+                </div>
+                <span class="dist-pct">~0.6%</span>
+              </div>
+              <div class="dist-item">
+                <span class="dist-label">Flowers</span>
+                <div class="dist-bar-wrap">
+                  <div class="dist-bar" style="--w: 55%"></div>
+                </div>
+                <span class="dist-pct">~0.4%</span>
+              </div>
+              <div class="dist-item">
+                <span class="dist-label">Leaves</span>
+                <div class="dist-bar-wrap">
+                  <div class="dist-bar" style="--w: 25%"></div>
+                </div>
+                <span class="dist-pct">~0.2%</span>
+              </div>
+            </div>
+          </div>
+          <div class="info-block">
+            <h3>Other Sources</h3>
+            <div class="sources-grid">
+              <div class="source-chip">C. speciosum</div>
+              <div class="source-chip">C. variegatum</div>
+              <div class="source-chip">C. byzantinum</div>
+              <div class="source-chip">Gloriosa superba</div>
+            </div>
+            <p class="note">⚠️ <em>Gloriosa superba</em> (glory lily) is also a significant commercial source of
+              colchicine, especially in Asia.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXTRACTION ===== -->
+  <section id="extraction" class="section extraction-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Phytochemistry</span>
+        <h2 class="section-title">Extraction &amp; Isolation Methods</h2>
+        <p class="section-subtitle">From plant material to pure crystalline alkaloid — a journey through pharmaceutical
+          chemistry</p>
+      </div>
+
+      <!-- Timeline -->
+      <div class="extraction-timeline">
+        <div class="timeline-item reveal" data-step="1">
+          <div class="timeline-icon step-1">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z" stroke="currentColor"
+                stroke-width="1.5" />
+            </svg>
+          </div>
+          <div class="timeline-content glass-card">
+            <span class="step-badge">Step 01</span>
+            <h3>Raw Material Preparation</h3>
+            <p>Corms or seeds of <em>Colchicum autumnale</em> are collected, cleaned, and dried. The material is then
+              coarsely powdered to increase surface area for extraction. Seeds are preferred due to higher alkaloid
+              content (~0.8% by dry weight).</p>
+            <div class="step-details">
+              <div class="detail-chip"><span>🌿</span> Drying at 40–50°C</div>
+              <div class="detail-chip"><span>⚙️</span> Particle size: 1–2 mm</div>
+              <div class="detail-chip"><span>📊</span> Moisture content &lt; 10%</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" data-step="2">
+          <div class="timeline-icon step-2">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"
+                stroke="currentColor" stroke-width="1.5" />
+            </svg>
+          </div>
+          <div class="timeline-content glass-card">
+            <span class="step-badge">Step 02</span>
+            <h3>Solvent Extraction (Maceration / Soxhlet)</h3>
+            <p>The powdered plant material is extracted using suitable solvents. Two primary methods are employed:</p>
+            <div class="method-cards">
+              <div class="method-card">
+                <h4>Maceration</h4>
+                <p>Plant material + 70–95% ethanol. Soaked 24–72 hours at room temperature. Simple but lower efficiency.
+                </p>
+                <span class="method-tag">Classical</span>
+              </div>
+              <div class="method-card">
+                <h4>Soxhlet Extraction</h4>
+                <p>Continuous hot solvent extraction using 70% ethanol or methanol. Higher yield, cycles for 6–8 hours.
+                  Most commonly used.</p>
+                <span class="method-tag preferred">Preferred</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" data-step="3">
+          <div class="timeline-icon step-3">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
+                stroke="currentColor" stroke-width="1.5" />
+            </svg>
+          </div>
+          <div class="timeline-content glass-card">
+            <span class="step-badge">Step 03</span>
+            <h3>Defatting &amp; Purification</h3>
+            <p>The alcohol filtrate is evaporated under reduced pressure. The residue is dissolved in water and defatted
+              with petroleum ether to remove lipophilic compounds (fats, waxes, chlorophylls).</p>
+            <div class="step-details">
+              <div class="detail-chip"><span>🧪</span> Petroleum ether defatting</div>
+              <div class="detail-chip"><span>🔄</span> Rotary evaporation</div>
+              <div class="detail-chip"><span>🌡️</span> 40°C under vacuum</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" data-step="4">
+          <div class="timeline-icon step-4">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M7 16V4m0 0L3 8m4-4l4 4m6 0v12m0 0l4-4m-4 4l-4-4" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" />
+            </svg>
+          </div>
+          <div class="timeline-content glass-card">
+            <span class="step-badge">Step 04</span>
+            <h3>Alkaloid Basification &amp; Transfer</h3>
+            <p>The aqueous fraction is basified to pH 8–9 using dilute ammonia (NH₄OH) or sodium carbonate. At this pH,
+              colchicine (non-basic alkaloid — unusual!) and other alkaloids are extracted into chloroform or
+              dichloromethane.</p>
+            <div class="step-details">
+              <div class="detail-chip"><span>⚗️</span> NH₄OH basification</div>
+              <div class="detail-chip"><span>🧫</span> pH adjusted to 8–9</div>
+              <div class="detail-chip"><span>💧</span> Chloroform partition</div>
+            </div>
+            <div class="highlight-box">
+              <strong>Note:</strong> Colchicine is unique — it is a <em>non-basic alkaloid</em> (tropolone type), so it
+              behaves differently from typical alkaloids during acid-base extraction — it is neutral and soluble in both
+              polar and non-polar solvents.
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" data-step="5">
+          <div class="timeline-icon step-5">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"
+                stroke="currentColor" stroke-width="1.5" />
+            </svg>
+          </div>
+          <div class="timeline-content glass-card">
+            <span class="step-badge">Step 05</span>
+            <h3>Chromatographic Purification</h3>
+            <p>The organic layer (chloroform extract) is concentrated and subjected to column chromatography using
+              silica gel to separate colchicine from co-extracted compounds. HPLC is used for final purity assessment.
+            </p>
+            <div class="chroma-info">
+              <div class="chroma-card">
+                <h4>Column Chromatography</h4>
+                <ul>
+                  <li>Stationary phase: Silica gel 60</li>
+                  <li>Mobile phase: CHCl₃ : MeOH (9:1)</li>
+                  <li>Monitoring: TLC, UV 254 nm</li>
+                </ul>
+              </div>
+              <div class="chroma-card">
+                <h4>HPLC Analysis</h4>
+                <ul>
+                  <li>Column: C18 reversed phase</li>
+                  <li>Mobile phase: ACN : H₂O (30:70)</li>
+                  <li>Detection: UV 254 nm</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="timeline-item reveal" data-step="6">
+          <div class="timeline-icon step-6">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path
+                d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"
+                stroke="currentColor" stroke-width="1.5" />
+            </svg>
+          </div>
+          <div class="timeline-content glass-card">
+            <span class="step-badge">Step 06</span>
+            <h3>Crystallization &amp; Final Product</h3>
+            <p>Colchicine-rich fractions are pooled, concentrated, and crystallized from ethyl acetate or acetone. The
+              pale yellow crystals are collected by filtration, washed, and dried. Purity is confirmed by HPLC (&gt;98%)
+              and melting point.</p>
+            <div class="final-specs">
+              <div class="spec">
+                <span class="spec-label">Yield</span>
+                <span class="spec-value">0.5–1.5%</span>
+              </div>
+              <div class="spec">
+                <span class="spec-label">Purity</span>
+                <span class="spec-value">&gt;98%</span>
+              </div>
+              <div class="spec">
+                <span class="spec-label">MP</span>
+                <span class="spec-value">142–150°C</span>
+              </div>
+              <div class="spec">
+                <span class="spec-label">Color</span>
+                <span class="spec-value">Pale Yellow</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Extraction image -->
+      <div class="extraction-image-wrap reveal">
+        <img src="assets/extraction_process.png" alt="Colchicine laboratory extraction process" class="section-image" />
+        <div class="img-caption">Laboratory extraction and purification workflow for colchicine isolation</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PHARMACOLOGY ===== -->
+  <section id="pharmacology" class="section pharma-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Mechanism of Action</span>
+        <h2 class="section-title">Pharmacology</h2>
+        <p class="section-subtitle">Understanding how colchicine disrupts cellular processes at the molecular level</p>
+      </div>
+
+      <div class="moa-container">
+        <div class="moa-main glass-card reveal">
+          <h3>Primary Mechanism: Tubulin Binding</h3>
+          <p>Colchicine's primary mechanism involves <strong>binding to β-tubulin</strong> at the colchicine-binding
+            site — a distinct site from where other anti-tubulin drugs (like vincristine or taxol) bind. This disrupts
+            microtubule dynamics.</p>
+
+          <div class="moa-steps">
+            <div class="moa-step">
+              <div class="moa-num">01</div>
+              <div class="moa-text">
+                <h4>Tubulin Dimer Binding</h4>
+                <p>Colchicine binds to free α/β-tubulin heterodimers at the β-tubulin subunit's colchicine site with
+                  high affinity (Kd ≈ 10⁻⁶ M) in a slow, tight, and partially reversible manner.</p>
+              </div>
+            </div>
+            <div class="moa-step">
+              <div class="moa-num">02</div>
+              <div class="moa-text">
+                <h4>Microtubule Dynamics Disruption</h4>
+                <p>The colchicine-tubulin complex incorporates into growing microtubule ends, causing a structural
+                  "conformational cap" that <em>prevents further polymerization</em> — effectively capping the
+                  microtubule ends.</p>
+              </div>
+            </div>
+            <div class="moa-step">
+              <div class="moa-num">03</div>
+              <div class="moa-text">
+                <h4>Mitotic Arrest</h4>
+                <p>Without functional microtubules, the <strong>mitotic spindle cannot form</strong>. Cells are arrested
+                  in metaphase of mitosis (M-phase arrest), preventing cell division. This underlies both its
+                  anti-inflammatory and anti-cancer activities.</p>
+              </div>
+            </div>
+            <div class="moa-step">
+              <div class="moa-num">04</div>
+              <div class="moa-text">
+                <h4>Anti-Inflammatory Effects</h4>
+                <p>In neutrophils, colchicine disrupts microtubule-dependent migration and NALP3 inflammasome assembly,
+                  inhibiting <strong>IL-1β secretion</strong>, degranulation, and superoxide generation — key mediators
+                  of gout-related inflammation.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="moa-sidebar">
+          <div class="pharma-card glass-card reveal">
+            <h3>Pharmacokinetics</h3>
+            <div class="pk-grid">
+              <div class="pk-item">
+                <span class="pk-label">Absorption</span>
+                <span class="pk-val">Rapid oral absorption (1–2 hrs)</span>
+              </div>
+              <div class="pk-item">
+                <span class="pk-label">Bioavailability</span>
+                <span class="pk-val">~45%</span>
+              </div>
+              <div class="pk-item">
+                <span class="pk-label">Plasma binding</span>
+                <span class="pk-val">39–50%</span>
+              </div>
+              <div class="pk-item">
+                <span class="pk-label">Volume of Dist.</span>
+                <span class="pk-val">5–8 L/kg</span>
+              </div>
+              <div class="pk-item">
+                <span class="pk-label">Metabolism</span>
+                <span class="pk-val">Liver (CYP3A4)</span>
+              </div>
+              <div class="pk-item">
+                <span class="pk-label">Half-life</span>
+                <span class="pk-val">26–31 hours</span>
+              </div>
+              <div class="pk-item">
+                <span class="pk-label">Excretion</span>
+                <span class="pk-val">Fecal (40–65%), Renal</span>
+              </div>
+              <div class="pk-item">
+                <span class="pk-label">Transporter</span>
+                <span class="pk-val">P-glycoprotein substrate</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="pharma-card glass-card reveal">
+            <h3>Key Drug Interactions</h3>
+            <div class="interaction-list">
+              <div class="interaction-item danger">
+                <span class="int-icon">⚠️</span>
+                <div>
+                  <strong>CYP3A4 inhibitors</strong>
+                  <p>Clarithromycin, ketoconazole → Toxic colchicine levels</p>
+                </div>
+              </div>
+              <div class="interaction-item warning">
+                <span class="int-icon">⚡</span>
+                <div>
+                  <strong>P-gp inhibitors</strong>
+                  <p>Cyclosporin → Increased absorption</p>
+                </div>
+              </div>
+              <div class="interaction-item warning">
+                <span class="int-icon">💊</span>
+                <div>
+                  <strong>Statins</strong>
+                  <p>Myopathy risk when co-administered</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== THERAPEUTIC USES ===== -->
+  <section id="therapeutic" class="section therapeutic-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Clinical Applications</span>
+        <h2 class="section-title">Therapeutic Uses</h2>
+        <p class="section-subtitle">From treating ancient diseases to cutting-edge research — colchicine's remarkable
+          clinical versatility</p>
+      </div>
+
+      <div class="therapeutic-image-wrap reveal">
+        <img src="assets/therapeutic_uses.png" alt="Colchicine therapeutic applications" class="section-image" />
+      </div>
+
+      <div class="use-cards-grid">
+        <!-- Gout -->
+        <div class="use-card glass-card reveal" id="use-gout">
+          <div class="use-header">
+            <div class="use-icon gout-icon">🦴</div>
+            <div>
+              <span class="use-status approved">FDA Approved</span>
+              <h3>Acute Gout &amp; Prophylaxis</h3>
+            </div>
+          </div>
+          <p>Colchicine is the first-line treatment for acute gout flares. It inhibits neutrophil migration into joints
+            and blocks NALP3 inflammasome activation, reducing urate crystal-induced inflammation rapidly.</p>
+          <div class="use-details">
+            <div class="use-detail"><span>Dose:</span> 1.2 mg initially, then 0.6 mg 1 hr later</div>
+            <div class="use-detail"><span>Onset:</span> 12–24 hours</div>
+            <div class="use-detail"><span>Brand:</span> Colcrys®, Mitigare®</div>
+          </div>
+          <div class="evidence-bar">
+            <span>Evidence Level</span>
+            <div class="evidence-fill" style="--fill: 95%"></div>
+            <span class="ev-pct">High (A)</span>
+          </div>
+        </div>
+
+        <!-- FMF -->
+        <div class="use-card glass-card reveal" id="use-fmf">
+          <div class="use-header">
+            <div class="use-icon fmf-icon">🧬</div>
+            <div>
+              <span class="use-status approved">FDA Approved</span>
+              <h3>Familial Mediterranean Fever (FMF)</h3>
+            </div>
+          </div>
+          <p>Colchicine is the drug of choice for FMF — a hereditary auto-inflammatory disorder. It prevents recurring
+            episodes of fever, peritonitis, pleuritis, and arthritis, and crucially prevents amyloid A amyloidosis — a
+            life-threatening complication.</p>
+          <div class="use-details">
+            <div class="use-detail"><span>Dose:</span> 1.2–2.4 mg/day (adults)</div>
+            <div class="use-detail"><span>Duration:</span> Life-long therapy</div>
+            <div class="use-detail"><span>Response:</span> &gt;90% patients</div>
+          </div>
+          <div class="evidence-bar">
+            <span>Evidence Level</span>
+            <div class="evidence-fill" style="--fill: 98%"></div>
+            <span class="ev-pct">High (A)</span>
+          </div>
+        </div>
+
+        <!-- Pericarditis -->
+        <div class="use-card glass-card reveal" id="use-peri">
+          <div class="use-header">
+            <div class="use-icon peri-icon">❤️</div>
+            <div>
+              <span class="use-status approved">FDA Approved</span>
+              <h3>Pericarditis (Acute &amp; Recurrent)</h3>
+            </div>
+          </div>
+          <p>The COPE and ICAP trials demonstrated colchicine's efficacy in acute pericarditis, reducing the rate of
+            recurrence by ~50%. It is now a standard add-on to NSAIDs/aspirin for both acute and recurrent pericarditis.
+          </p>
+          <div class="use-details">
+            <div class="use-detail"><span>Dose:</span> 0.5 mg twice daily (≥70kg)</div>
+            <div class="use-detail"><span>Duration:</span> 3 months (acute), 6 months (recurrent)</div>
+            <div class="use-detail"><span>NNT:</span> ~8 patients</div>
+          </div>
+          <div class="evidence-bar">
+            <span>Evidence Level</span>
+            <div class="evidence-fill" style="--fill: 90%"></div>
+            <span class="ev-pct">High (A)</span>
+          </div>
+        </div>
+
+        <!-- CV -->
+        <div class="use-card glass-card reveal" id="use-cv">
+          <div class="use-header">
+            <div class="use-icon cv-icon">💓</div>
+            <div>
+              <span class="use-status emerging">Emerging</span>
+              <h3>Cardiovascular Disease</h3>
+            </div>
+          </div>
+          <p>The COLCOT and LoDoCo2 trials showed colchicine (0.5 mg/day) significantly reduces major adverse
+            cardiovascular events (MACE) in post-MI and stable coronary artery disease patients, likely through
+            inflammasome inhibition.</p>
+          <div class="use-details">
+            <div class="use-detail"><span>Trials:</span> COLCOT, LoDoCo2</div>
+            <div class="use-detail"><span>Dose:</span> 0.5 mg/day (Lodoco®)</div>
+            <div class="use-detail"><span>Approved:</span> Australia, Canada, EU (2023)</div>
+          </div>
+          <div class="evidence-bar">
+            <span>Evidence Level</span>
+            <div class="evidence-fill" style="--fill: 85%"></div>
+            <span class="ev-pct">High (A)</span>
+          </div>
+        </div>
+
+        <!-- Behcet -->
+        <div class="use-card glass-card reveal" id="use-behcet">
+          <div class="use-header">
+            <div class="use-icon behcet-icon">🔬</div>
+            <div>
+              <span class="use-status off-label">Off-Label</span>
+              <h3>Behçet's Disease</h3>
+            </div>
+          </div>
+          <p>Colchicine is used to manage orogenital ulcers, skin lesions, and arthritis in Behçet's disease — a rare
+            systemic vasculitis. International guidelines recommend it as first-line for mucocutaneous involvement.</p>
+          <div class="use-details">
+            <div class="use-detail"><span>Dose:</span> 1–2 mg/day</div>
+            <div class="use-detail"><span>Target:</span> Mucocutaneous lesions</div>
+            <div class="use-detail"><span>Response:</span> Moderate to good</div>
+          </div>
+          <div class="evidence-bar">
+            <span>Evidence Level</span>
+            <div class="evidence-fill" style="--fill: 75%"></div>
+            <span class="ev-pct">Moderate (B)</span>
+          </div>
+        </div>
+
+        <!-- Cancer -->
+        <div class="use-card glass-card reveal" id="use-cancer">
+          <div class="use-header">
+            <div class="use-icon cancer-icon">🧫</div>
+            <div>
+              <span class="use-status research">Research</span>
+              <h3>Anti-Cancer Research</h3>
+            </div>
+          </div>
+          <p>Due to its potent anti-mitotic activity, colchicine and its derivatives (thiocolchicine, combretastatin)
+            are investigated as vascular-disrupting agents in various cancers. Colchicine itself is too toxic for
+            systemic cancer use, but prodrugs show promise.</p>
+          <div class="use-details">
+            <div class="use-detail"><span>Targets:</span> Solid tumors, melanoma</div>
+            <div class="use-detail"><span>Approach:</span> Colchicine prodrugs</div>
+            <div class="use-detail"><span>Status:</span> Phase I/II trials</div>
+          </div>
+          <div class="evidence-bar">
+            <span>Evidence Level</span>
+            <div class="evidence-fill" style="--fill: 50%"></div>
+            <span class="ev-pct">Investigational</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- COVID-19 note -->
+      <div class="covid-note glass-card reveal">
+        <div class="covid-icon">🦠</div>
+        <div>
+          <h3>COVID-19 Research</h3>
+          <p>During the COVID-19 pandemic, colchicine was investigated as a potential immunomodulatory therapy. The
+            COLCORONA trial showed a modest reduction in hospitalization risk in non-hospitalized COVID-19 patients.
+            While not widely adopted, it highlighted colchicine's broad anti-inflammatory potential.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TOXICOLOGY ===== -->
+  <section id="toxicology" class="section tox-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Safety Profile</span>
+        <h2 class="section-title">Toxicology &amp; Safety</h2>
+        <p class="section-subtitle">Understanding the narrow therapeutic window and managing colchicine toxicity</p>
+      </div>
+
+      <div class="tox-grid">
+        <div class="tox-card glass-card reveal">
+          <div class="tox-header">
+            <span class="tox-icon">⚠️</span>
+            <h3>Common Adverse Effects</h3>
+          </div>
+          <div class="tox-list">
+            <div class="tox-item mild">
+              <span class="tox-severity">Mild</span>
+              <div class="tox-items-list">
+                <span>Nausea</span><span>Vomiting</span><span>Diarrhea</span><span>Abdominal cramps</span>
+              </div>
+            </div>
+            <div class="tox-item moderate">
+              <span class="tox-severity">Moderate</span>
+              <div class="tox-items-list">
+                <span>Myopathy</span><span>Peripheral neuropathy</span><span>Bone marrow suppression</span>
+              </div>
+            </div>
+            <div class="tox-item severe">
+              <span class="tox-severity">Severe</span>
+              <div class="tox-items-list">
+                <span>Multi-organ failure</span><span>Cardiac arrhythmias</span><span>Respiratory failure</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tox-card glass-card reveal">
+          <div class="tox-header">
+            <span class="tox-icon">💊</span>
+            <h3>Dosing &amp; Therapeutic Window</h3>
+          </div>
+          <p>Colchicine has a <strong>narrow therapeutic index</strong>. Therapeutic doses and toxic doses overlap
+            significantly, making careful dosing essential.</p>
+          <div class="dose-window">
+            <div class="dose-bar therapeutic" style="--start: 0%;--width: 35%">
+              <span>Therapeutic: 0.6–1.8 mg/day</span>
+            </div>
+            <div class="dose-bar toxic" style="--start: 28%;--width: 42%">
+              <span>Toxic: &gt;0.5 mg/kg total</span>
+            </div>
+            <div class="dose-bar lethal" style="--start: 60%;--width: 30%">
+              <span>Lethal: ~0.8 mg/kg</span>
+            </div>
+          </div>
+          <p class="dose-note">LD₅₀ (human estimated): ~0.8 mg/kg body weight</p>
+        </div>
+
+        <div class="tox-card glass-card reveal">
+          <div class="tox-header">
+            <span class="tox-icon">🚫</span>
+            <h3>Contraindications</h3>
+          </div>
+          <ul class="contraindication-list">
+            <li>Severe renal impairment (CrCl &lt; 30 mL/min) — dose adjust or avoid</li>
+            <li>Severe hepatic impairment</li>
+            <li>Concurrent strong CYP3A4 + P-gp inhibitors</li>
+            <li>Pregnancy (Category C) — use with caution</li>
+            <li>Known hypersensitivity to colchicine</li>
+          </ul>
+        </div>
+
+        <div class="tox-card glass-card reveal">
+          <div class="tox-header">
+            <span class="tox-icon">🏥</span>
+            <h3>Management of Overdose</h3>
+          </div>
+          <p>No specific antidote exists. Management is <strong>entirely supportive</strong>:</p>
+          <ul class="management-list">
+            <li><strong>GI decontamination</strong> (if early presentation)</li>
+            <li><strong>IV fluids</strong> and electrolyte monitoring</li>
+            <li><strong>Cardiac monitoring</strong> — watch for arrhythmias</li>
+            <li><strong>G-CSF/GM-CSF</strong> for bone marrow suppression</li>
+            <li><strong>Hemodialysis</strong> — NOT effective (high protein binding)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== REFERENCES ===== -->
+  <section id="references" class="section ref-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Bibliography</span>
+        <h2 class="section-title">References</h2>
+        <p class="section-subtitle">Scientific literature and clinical evidence supporting this portfolio</p>
+      </div>
+      <div class="references-grid">
+        <div class="ref-card glass-card reveal">
+          <span class="ref-num">01</span>
+          <p>Finkelstein Y, et al. (2010). <em>Colchicine poisoning: the dark side of an ancient drug</em>. Clinical
+            Toxicology, 48(5):407–414.</p>
+        </div>
+        <div class="ref-card glass-card reveal">
+          <span class="ref-num">02</span>
+          <p>Leung YY, et al. (2015). <em>Colchicine — Update on mechanisms of action and therapeutic uses</em>.
+            Seminars in Arthritis and Rheumatism, 45(3):341–350.</p>
+        </div>
+        <div class="ref-card glass-card reveal">
+          <span class="ref-num">03</span>
+          <p>Imazio M, et al. (2013). <em>A Randomized Trial of Colchicine for Acute Pericarditis</em> (ICAP Trial).
+            NEJM, 369(16):1522–1528.</p>
+        </div>
+        <div class="ref-card glass-card reveal">
+          <span class="ref-num">04</span>
+          <p>Tardif JC, et al. (2019). <em>Efficacy and safety of low-dose colchicine after myocardial infarction</em>
+            (COLCOT Trial). NEJM, 381(26):2497–2505.</p>
+        </div>
+        <div class="ref-card glass-card reveal">
+          <span class="ref-num">05</span>
+          <p>Nidorf SM, et al. (2020). <em>Colchicine in Patients with Chronic Coronary Disease</em> (LoDoCo2 Trial).
+            NEJM, 383(19):1838–1847.</p>
+        </div>
+        <div class="ref-card glass-card reveal">
+          <span class="ref-num">06</span>
+          <p>Bhatt DL, et al. (2021). <em>Colchicine in acute myocardial infarction</em>. NEJM, 384(5):456–464.</p>
+        </div>
+        <div class="ref-card glass-card reveal">
+          <span class="ref-num">07</span>
+          <p>Katzung BG. (2018). <em>Basic and Clinical Pharmacology</em>, 14th ed. McGraw-Hill Education.</p>
+        </div>
+        <div class="ref-card glass-card reveal">
+          <span class="ref-num">08</span>
+          <p>Evans WC. (2009). <em>Trease and Evans' Pharmacognosy</em>, 16th ed. Edinburgh: Saunders/Elsevier.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT US (TEAM) ===== -->
+  <section id="team" class="section team-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">About Us</span>
+        <h2 class="section-title">Project Team</h2>
+        <p class="section-subtitle">Meet the supervisors and researchers behind this pharmacognosy portfolio.</p>
+      </div>
+
+      <!-- Supervisors -->
+      <div class="team-tier">
+        <h3 class="tier-title">Supervisors</h3>
+        <div class="supervisors-grid">
+          <!-- Supervisor 1 -->
+          <div class="team-card glass-card reveal">
+            <div class="member-img">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2m8-10a4 4 0 100-8 4 4 0 000 8z" stroke="currentColor"
+                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h4 class="member-name">Supervisor Name</h4>
+            <p class="member-role">Lead Pharmacognosist</p>
+            <p class="member-info">Ph.D. in natural product chemistry with extensive experience in tropolone alkaloids.
+            </p>
+          </div>
+          <!-- Supervisor 2 -->
+          <div class="team-card glass-card reveal">
+            <div class="member-img">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2m8-10a4 4 0 100-8 4 4 0 000 8z" stroke="currentColor"
+                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <h4 class="member-name">Supervisor Name</h4>
+            <p class="member-role">Research Director</p>
+            <p class="member-info">Specializing in analytical extraction techniques and phytochemical profiling.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Team Members -->
+      <div class="team-tier">
+        <h3 class="tier-title">Research Team</h3>
+        <div class="team-grid">
+          <!-- Member 1 -->
+          <div class="team-card glass-card reveal">
+            <div class="member-img">
+              <img src="assets/M1.jpg" alt="Abdulrahman abdulsattar" class="member-photo" />
+            </div>
+            <h4 class="member-name">Abdulrahman Abdulsattar</h4>
+            <p class="member-role">Team Leader, Web Developer, Designer</p>
+            <p class="member-info">Botanical analysis</p>
+          </div>
+          <!-- Member 2 -->
+          <div class="team-card glass-card reveal">
+            <div class="member-img"><svg viewBox="0 0 24 24" fill="none">
+                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2m8-10a4 4 0 100-8 4 4 0 000 8z" stroke="currentColor"
+                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg></div>
+            <h4 class="member-name">Team Member 2</h4>
+            <p class="member-role">Researcher</p>
+            <p class="member-info">Extraction methods</p>
+          </div>
+          <!-- Member 3 -->
+          <div class="team-card glass-card reveal">
+            <div class="member-img"><svg viewBox="0 0 24 24" fill="none">
+                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2m8-10a4 4 0 100-8 4 4 0 000 8z" stroke="currentColor"
+                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg></div>
+            <h4 class="member-name">Team Member 3</h4>
+            <p class="member-role">Researcher</p>
+            <p class="member-info">Pharmacology</p>
+          </div>
+          <!-- Member 4 -->
+          <div class="team-card glass-card reveal">
+            <div class="member-img"><svg viewBox="0 0 24 24" fill="none">
+                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2m8-10a4 4 0 100-8 4 4 0 000 8z" stroke="currentColor"
+                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg></div>
+            <h4 class="member-name">Team Member 4</h4>
+            <p class="member-role">Researcher</p>
+            <p class="member-info">Therapeutics</p>
+          </div>
+          <!-- Member 5 -->
+          <div class="team-card glass-card reveal">
+            <div class="member-img"><svg viewBox="0 0 24 24" fill="none">
+                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2m8-10a4 4 0 100-8 4 4 0 000 8z" stroke="currentColor"
+                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg></div>
+            <h4 class="member-name">Team Member 5</h4>
+            <p class="member-role">Researcher</p>
+            <p class="member-info">Toxicology</p>
+          </div>
+          <!-- Member 6 -->
+          <div class="team-card glass-card reveal">
+            <div class="member-img"><svg viewBox="0 0 24 24" fill="none">
+                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2m8-10a4 4 0 100-8 4 4 0 000 8z" stroke="currentColor"
+                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg></div>
+            <h4 class="member-name">Team Member 6</h4>
+            <p class="member-role">Researcher</p>
+            <p class="member-info">Data compilation</p>
+          </div>
+          <!-- Member 7 -->
+          <div class="team-card glass-card reveal">
+            <div class="member-img"><svg viewBox="0 0 24 24" fill="none">
+                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2m8-10a4 4 0 100-8 4 4 0 000 8z" stroke="currentColor"
+                  stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg></div>
+            <h4 class="member-name">Team Member 7</h4>
+            <p class="member-role">Researcher</p>
+            <p class="member-info">Visual design</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="20" cy="20" r="8" stroke="url(#grad2)" stroke-width="2" />
+              <circle cx="20" cy="8" r="3" fill="url(#grad2)" />
+              <circle cx="30" cy="26" r="3" fill="url(#grad2)" />
+              <circle cx="10" cy="26" r="3" fill="url(#grad2)" />
+              <defs>
+                <linearGradient id="grad2" x1="0" y1="0" x2="40" y2="40">
+                  <stop offset="0%" stop-color="#a855f7" />
+                  <stop offset="100%" stop-color="#06b6d4" />
+                </linearGradient>
+              </defs>
+            </svg>
+            <span>Colchicine</span>
+          </div>
+          <p>A comprehensive pharmacognosy portfolio exploring the science of <em>Colchicum autumnale</em>.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Sections</h4>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#plant">The Plant</a></li>
+            <li><a href="#extraction">Extraction</a></li>
+            <li><a href="#pharmacology">Pharmacology</a></li>
+            <li><a href="#therapeutic">Therapeutic Uses</a></li>
+            <li><a href="#toxicology">Toxicology</a></li>
+            <li><a href="#team">Team</a></li>
+          </ul>
+        </div>
+        <div class="footer-disclaimer">
+          <h4>Disclaimer</h4>
+          <p>This portfolio is for <strong>educational and research purposes only</strong>. It does not constitute
+            medical advice. Always consult qualified healthcare professionals for medical decisions.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Colchicine Pharmacognosy Portfolio. Educational Research Content.</p>
+        <p class="formula">C₂₂H₂₅NO₆ · MW 399.44 g/mol</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top -->
+  <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none">
+      <path d="M18 15l-6-6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+    </svg>
+  </button>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
